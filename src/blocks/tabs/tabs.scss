@@ -2,11 +2,11 @@
 $gray-lightest:               hsl(0, 0%, 90%) !default;
 
 $text-color:                  hsl(0, 0%, 10%) !default;
-$text-muted:                  hsl(0, 0%, 50%) !default;
+$text-color--muted:           hsl(0, 0%, 50%) !default;
 
 $border-color:                hsl(0, 0%, 60%) !default;
 
-$line-height:                 1.5em !default;
+$line-height:                 1.375em !default;
 
 $field-padding-vertical:      0.3em !default;
 $field-padding-horizontal:    0.7em !default;
@@ -27,6 +27,10 @@ $field-padding-horizontal:    0.7em !default;
     align-items: flex-end;
     cursor: pointer;
 
+    .no-js & {
+      display: none;
+    }
+
     &:after {
       content: '';
       flex-grow: 1;
@@ -42,23 +46,26 @@ $field-padding-horizontal:    0.7em !default;
     &:not(:last-child) {
       border-right: none;
     }
+
+    &--active {
+
+      #{$block-name}__link {
+        color: $text-color;
+        background-color: #fff;
+      }
+    }
   }
 
   &__link {
     display: block;
     padding: $field-padding-vertical $field-padding-horizontal;
-    color: $text-muted;
+    color: $text-color--muted;
     text-decoration: none;
     background-color: $gray-lightest;
 
     &:hover,
     &:focus {
-      color: $text-muted;
-    }
-
-    &.active {
-      color: $text-color;
-      background-color: #fff;
+      color: $text-color--muted;
     }
   }
 
@@ -70,10 +77,16 @@ $field-padding-horizontal:    0.7em !default;
   }
 
   &__content-item {
-    display: none;
 
-    &.active {
-      display: block;
+    .js & {
+      display: none;
+    }
+
+    &--active {
+
+      .js & {
+        display: block;
+      }
     }
   }
 }
