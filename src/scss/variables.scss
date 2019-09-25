@@ -24,25 +24,27 @@ $color-gh:                    #24292e;
 
 // Семантические цвета
 
-$main-color:                  #7391EA;
+$main-color:                  #00bc68;
 $color-main:                  $main-color;
+$second-color:                #191a1e;
 
-$text-color:                  #575B66;
-$title-color:                 #393939;
-$text-muted:                  #BDBDBD;
+$text-color:                  #fff;
+$title-color:                 #fff;
+$text-muted:                  #bdbdbd;
 
-$body-bg:                     #F4F4F4;
+$body-bg:                     $second-color;
 
-$link-color:                  $main-color;
-$link-color--hover:           #4240CF;
+$link-color:                  $text-color;
+$link-color--hover:           darken($main-color, 5%);
 
 $border-color:                $text-muted;
 
 // Базовая типографика
 
-$font-size:                   15px;
+$font-size:                   16px;
 
-$font-size--h1:               40px;
+$font-size--h1:               35px;
+
 $font-size--h2:               32px;
 $font-size--h3:               24px;
 $font-size--h4:               18px;
@@ -53,7 +55,7 @@ $line-height:                 1.5;
 
 //$typo-margin-vertical:        1em;
 
-$font-family:                -apple-system, BlinkMacSystemFont, 'Roboto', 'Ubuntu', 'Droid Sans', 'Helvetica Neue', 'Arial', sans-serif;
+$font-family:                -apple-system, BlinkMacSystemFont, 'Inter', 'Ubuntu', 'Droid Sans', 'Helvetica Neue', 'Arial', sans-serif;
 //$font-family--headings:      -apple-system, BlinkMacSystemFont, 'Roboto', 'Ubuntu', 'Droid Sans', 'Helvetica Neue', 'Arial', sans-serif;
 $font-family--monospace:     SFMono-Regular, Menlo, Monaco, Consolas, Liberation Mono, Courier New, monospace;
 
@@ -65,11 +67,11 @@ $screen-sm:                   480px;
 $screen-md:                   768px;
 $screen-lg:                   992px;
 $screen-xl:                   1280px;
-$screen-xxl:                  1800px;
+$screen-xxl:                  1920px;
 
 $container-sm:                100%;
 $container-md:                100%;
-$container-lg:                $screen-lg - 20;
+$container-lg:                100%;
 $container-xl:                $screen-xl - 20;
 $container-xxl:               $screen-xxl - 20;
 
@@ -77,7 +79,7 @@ $container-xxl:               $screen-xxl - 20;
 // Модульная сетка
 
 $grid-columns:                12;
-$grid-gutter-width:           20px;
+$grid-gutter-width:           60px;
 
 
 
@@ -91,7 +93,7 @@ $opacity:                     0.7;
 $transition-time:             0.3s;
 $shadow:                      0 4px 2px -2px rgba(0, 0, 0, 0.3);
 
-$menu-desktop-width:          $screen-xl;
+$menu-desktop-width:          $screen-xxl;
 $toggler-part-height:         3px;
 $toggler-part-bg-color:       #000;
 
