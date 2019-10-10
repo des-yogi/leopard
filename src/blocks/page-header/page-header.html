@@ -14,6 +14,39 @@
         <img src="img/leopard-agri-service-logo.svg" alt="Leopard Agri-Service logo" width="142" height="42">
       </a>
 
+      <div class="page-header__burger-wrapper">
+        <div class="burger"><span></span></div>
+        <span class="burger__title">Menu</span>
+      </div>
+
+      <div class="page-header__service-menu">
+        @@include('../../blocks/socials/socials.html')
+        <div class="page-header__dropdowns">
+          <div class="btn--group">
+            <a href="tel:+380676766676" class="btn">+380 67 67 666 76</a>
+            <button type="button" class="btn dropdown-toggle dropdown-toggle-split" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+              <span class="visually-hidden">Toggle Dropdown</span>
+            </button>
+            <div class="dropdown-menu">
+              <a href="tel:+380676766676" class="btn">+380 67 67 666 76</a>
+              <a href="tel:+380676766676" class="btn">+380 67 67 666 76</a>
+              <a href="tel:+380676766676" class="btn">+380 67 67 666 76</a>
+            </div>
+          </div>
+          <div class="lang-switcher  dropdown" id="lang-switcher">
+            <button class="dropdown-toggle" type="button" id="lang-switcher-toggler" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+              <svg width="26" height="26">
+                <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="img/sprite-svg.svg#lang-switcher-icon"></use>
+              </svg>
+            </button>
+            <div class="dropdown-menu" aria-labelledby="lang-switcher">
+              <a class="dropdown-item" href="#">UA</a>
+              <a class="dropdown-item" href="#">RU</a>
+            </div>
+          </div>
+        </div>
+      </div>
+
     </div>
   </div>
 </header>

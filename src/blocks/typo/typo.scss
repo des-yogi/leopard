@@ -52,6 +52,14 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 
+  @media (min-width: $container-xl) {
+    font-size: $font-size * 1.125;
+  }
+
+  @media (min-width: $container-xxl) {
+    font-size: $font-size * 1.25;
+  }
+
   // text-rendering: optimizeLegibility;
   // Partial support in Android browser versions is due to a serious bug where text-rendering: optimizeLegibility causes custom web fonts to not render!!!
 }
@@ -68,70 +76,114 @@ h3,
 h4,
 h5,
 h6 {
-  margin-top: 1em;
-  margin-bottom: 0.5em;
+  margin-bottom: 20px;
   font-family: $font-family;
   //font-weight: 700;
   line-height: 1.2;
   color: currentColor;
 }
 
-.h1,
 .h2,
 .h3,
-h1,
-h2,
-h3 {
-  margin-top: 1em;
-  margin-bottom: 0.5em;
-}
-
 .h4,
 .h5,
 .h6,
+h2,
+h3,
 h4,
 h5,
 h6 {
-  margin-top: 1em;
-  margin-bottom: 0.5em;
+  margin-top: 2em;
+  //margin-bottom: 0.5em;
+  font-weight: 600;
+}
+
+div,
+section,
+article {
+
+  *:first-child {
+    margin-top: 0;
+  }
 }
 
 .h1,
 h1 {
+  font-weight: 700;
   font-size: $font-size--h1;
 
   @media (min-width: $container-xl) {
-    font-size: $font-size--h1 * 1.485;
+    font-size: $font-size--h1 * 1.486;
   }
 
   @media (min-width: $container-xxl) {
-    font-size: $font-size--h1 * 1.77;
+    font-size: $font-size--h1 * 1.773;
   }
 }
 
 .h2,
 h2 {
   font-size: $font-size--h2;
+
+  @media (min-width: $container-xl) {
+    font-size: $font-size--h2 * 1.231;
+  }
+
+  @media (min-width: $container-xxl) {
+    font-size: $font-size--h2 * 1.615;
+  }
 }
 
 .h3,
 h3 {
   font-size: $font-size--h3;
+
+  @media (min-width: $container-xl) {
+    font-size: $font-size--h3 * 1.091;
+  }
+
+  @media (min-width: $container-xxl) {
+    font-size: $font-size--h3 * 1.455;
+  }
 }
 
 .h4,
 h4 {
   font-size: $font-size--h4;
+
+  @media (min-width: $container-xl) {
+    font-size: $font-size--h4 * 1.1;
+  }
+
+  @media (min-width: $container-xxl) {
+    font-size: $font-size--h4 * 1.2;
+  }
 }
 
 .h5,
 h5 {
   font-size: $font-size--h5;
+
+  @media (min-width: $container-xl) {
+    font-size: $font-size--h5 * 1.125;
+  }
+
+  @media (min-width: $container-xxl) {
+    font-size: $font-size--h5 * 1.125;
+  }
 }
 
 .h6,
 h6 {
   font-size: $font-size--h6;
+
+  @media (min-width: $container-xl) {
+    font-size: $font-size--h6 * 1.125;
+  }
+
+  @media (min-width: $container-xxl) {
+    font-size: $font-size--h6 * 1.125;
+  }
 }
 
 .p,
@@ -143,12 +195,16 @@ blockquote,
 pre,
 address,
 figure {
-  //margin-top: 0.5em;
-  // margin-bottom: 0.5em;
+  margin-top: 0;
+  margin-bottom: 1em;
   color: currentColor;
 
   & + & {
-    margin-top: 0.5em;
+    margin-top: 1em;
+  }
+
+  &:last-child {
+    margin-bottom: 0;
   }
 }
 
@@ -158,7 +214,7 @@ address {
 
 ul,
 ol {
-  padding-left: 1.3em;
+  padding-left: 2em;
 }
 
 ol ol,
@@ -190,7 +246,7 @@ small {
 
 sub,
 sup {
-  font-size: 70%;
+  font-size: 65%;
 }
 
 b,
