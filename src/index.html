@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html class="no-js  page" lang="ru" prefix="og: https://ogp.me/ns#">
+<html class="no-js  page" lang="en" prefix="og: https://ogp.me/ns#">
 
 <head>
   <meta charset="utf-8">
@@ -8,7 +8,7 @@
 </head>
 
 <body>
-<noscript>У вас отключен JavaScript. Приносим наши извинения, но это делает затруднительным использование данного сайта.</noscript>
+<noscript>You have javascript disabled. We apologize, but this makes it difficult to use this site. У вас отключен JavaScript. Приносим наши извинения, но это делает затруднительным использование данного сайта.</noscript>
 
   <div id="content-wrapper" class="page__inner">
 
@@ -17,23 +17,50 @@
 
       <main class="main-content" role="main">
 
-        <section class="index-slider  container">
+        @@include('blocks/callback-btn/callback-btn.html')
+
+        <section class="b-lazy  index-slider  container" data-src="img/index-slide-bg.jpg">
           <div class="swiper-container index-slider__container">
             <div class="swiper-wrapper">
+
               <div class="swiper-slide  index-slider__slide">
-                <h2 class="h1">Why Leopard?</h2>
-                <p>Consequat veniam cupidatat sunt sint cupidatat ex nostrud reprehenderit et.</p>
-                <a href="about.html" class="btn">Read more</a>
+                <h2 class="h1  index-slider__title">Why Leopard?</h2>
+                <div class="row  index-slider__descr-wrapper">
+                  <div class="col-1-2">
+                    <p class="index-slider__descr">Consequat veniam cupidatat sunt sint cupidatat ex nostrud reprehenderit et.</p>
+                  </div>
+                </div>
+                <div class="row  index-slider__btn-wrapper">
+                  <div class="col-1-4">
+                    <a href="about.html" class="btn index-slider__readmore">Read more</a>
+                  </div>
+                </div>
               </div>
               <div class="swiper-slide  index-slider__slide">
-                <h2 class="h1">Why Leopard? 2</h2>
-                <p>Consequat veniam cupidatat sunt sint cupidatat ex nostrud reprehenderit et.</p>
-                <a href="about.html" class="btn">Read more</a>
+                <h2 class="h1  index-slider__title">Why Leopard? 2</h2>
+                <div class="row  index-slider__descr-wrapper">
+                  <div class="col-1-2">
+                    <p class="index-slider__descr">Consequat veniam cupidatat sunt sint cupidatat ex nostrud reprehenderit et.</p>
+                  </div>
+                </div>
+                <div class="row  index-slider__btn-wrapper">
+                  <div class="col-1-4">
+                    <a href="about.html" class="btn index-slider__readmore">Read more</a>
+                  </div>
+                </div>
               </div>
               <div class="swiper-slide  index-slider__slide">
-                <h2 class="h1">Why Leopard? 3</h2>
-                <p>Consequat veniam cupidatat sunt sint cupidatat ex nostrud reprehenderit et.</p>
-                <a href="about.html" class="btn">Read more</a>
+                <h2 class="h1  index-slider__title">Why Leopard? 3</h2>
+                <div class="row  index-slider__descr-wrapper">
+                  <div class="col-1-2">
+                    <p class="index-slider__descr">Consequat veniam cupidatat sunt sint cupidatat ex nostrud reprehenderit et.</p>
+                  </div>
+                </div>
+                <div class="row  index-slider__btn-wrapper">
+                  <div class="col-1-4">
+                    <a href="about.html" class="btn index-slider__readmore">Read more</a>
+                  </div>
+                </div>
               </div>
             </div>
             <div class="index-slider__navigation">
@@ -194,9 +221,10 @@
           </div>
         </section>
 
-        <section class="section  partners">
+        <section class="section  partners-slider">
           <div class="container">
-            <div class="swiper-container  partners__container">
+            <h2>Partners</h2>
+            <div class="swiper-container  partners-slider__container">
               <div class="swiper-wrapper">
                 <div class="swiper-slide">
                   <img src="img/chemical-group.png" alt="Партнер">
@@ -215,6 +243,184 @@
           </div>
         </section>
 
+        <section class="section  partnership-form">
+          <div class="container">
+            <h2>Partnership</h2>
+            <div class="row">
+              <div class="partnership__intro-col">
+                <div class="partnership__intro">
+                  <h4>Let's start cooperation today.</h4>
+                  <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Amet cras urna, malesuada euismod. Vulputate non suspendisse consequat volutpat, tellus. Nisi ac sit lacus, mauris.</p>
+                </div>
+              </div>
+            </div>
+            <form class="partnership__form" id="partnershipForm" action="/" method="post">
+              <div class="partnership__form-info">
+                <h4>Fill the form, please</h4>
+                <p>Fields marked with * are required!</p>
+              </div>
+
+              <div class="row">
+
+                <div class="partnership__form-col">
+                  <label class="field-text">
+                    <span class="field-text__input-wrap">
+                      <input class="field-text__input" type="text" name="name" value="" placeholder="Your name">
+                      <span class="field-text__help-text  error">Текст ошибки</span>
+                    </span>
+                  </label>
+
+                  <label class="field-text">
+                    <span class="field-text__input-wrap">
+                      <input class="field-text__input" type="text" name="company" value="" placeholder="Company Name">
+                      <span class="field-text__help-text  error">Текст ошибки</span>
+                    </span>
+                  </label>
+                </div>
+
+                <div class="partnership__form-col">
+                  <label class="field-text">
+                    <span class="field-text__input-wrap">
+                      <input class="field-text__input" type="tel" name="tel" value="" placeholder="Phone">
+                      <span class="field-text__help-text  error">Текст ошибки</span>
+                    </span>
+                  </label>
+
+                  <label class="field-text">
+                    <span class="field-text__input-wrap">
+                      <input class="field-text__input" type="email" name="email" value="" placeholder="Email">
+                      <span class="field-text__help-text  error">Текст ошибки</span>
+                    </span>
+                  </label>
+                </div>
+
+                <div class="partnership__form-col">
+                  <label class="field-text">
+                    <span class="field-text__input-wrap">
+                      <textarea class="field-text__input" name="message" value="" placeholder="Message"></textarea>
+                      <span class="field-text__help-text  error">Текст ошибки</span>
+                    </span>
+                  </label>
+                </div>
+
+                <div class="partnership__form-col">
+                  <div class="field-actions">
+                    <input class="btn  partnership__submit" type="submit" name="submit" value="Submit">
+                  </div>
+                  <div class="field-checkbox">
+                    <label class="field-checkbox__name">
+                      <input id="agreement" class="field-checkbox__input" type="checkbox" checked>
+                      <span class="field-checkbox__name-text">I consent to the processing of personal data</span>
+                    </label>
+                  </div>
+                </div>
+
+              </div>
+
+            </form>
+          </div>
+        </section>
+
+        <section class="section  last-news">
+          <div class="container">
+
+            <div class="row">
+
+              <div class="col-1-3">
+                <div class="card-vert">
+                  <div class="embed-responsive  embed-responsive--4-3  card-vert__img">
+                    <picture>
+                      <source data-srcset="img/news-01.webp" media="(min-width: 992px)" type="image/webp">
+                      <source data-srcset="img/news-01.jpg" media="(min-width: 992px)">
+                      <!-- 365x274   -->
+                      <source data-srcset="img/news-01.webp" media="(min-width: 768px)" type="image/webp">
+                      <source data-srcset="img/news-01.jpg" media="(min-width: 768px)">
+                      <!-- 426x320   -->
+                      <source data-srcset="img/news-01.webp" media="(min-width: 480px)" type="image/webp">
+                      <source data-srcset="img/news-01.jpg" media="(min-width: 480px)">
+                      <!-- 560x420   -->
+                      <source data-srcset="img/news-01.webp" type="image/webp">
+                      <img class="b-lazy" data-src="img/news-01.jpg" src=data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw== alt="Картинка" width="480" height="360">
+                    </picture>
+                  </div>
+                  <div class="card-vert__text">
+                    <h3>Caption</h3>
+                    <p>Quis aute commodo Lorem culpa commodo ut elit et dolore exercitation aliqua...</p>
+                    <ul>
+                      <li>Quis aute commodo Lorem culpa commodo</li>
+                      <li>Quis aute commodo Lorem culpa commodo</li>
+                    </ul>
+                    <a href="article.html" class="btn">Read More</a>
+                  </div>
+                </div>
+              </div>
+
+              <div class="col-1-3">
+                <div class="card-vert">
+                  <div class="embed-responsive  embed-responsive--4-3  card-vert__img">
+                    <picture>
+                      <source data-srcset="img/news-01.webp" media="(min-width: 992px)" type="image/webp">
+                      <source data-srcset="img/news-01.jpg" media="(min-width: 992px)">
+                      <!-- 365x274   -->
+                      <source data-srcset="img/news-01.webp" media="(min-width: 768px)" type="image/webp">
+                      <source data-srcset="img/news-01.jpg" media="(min-width: 768px)">
+                      <!-- 426x320   -->
+                      <source data-srcset="img/news-01.webp" media="(min-width: 480px)" type="image/webp">
+                      <source data-srcset="img/news-01.jpg" media="(min-width: 480px)">
+                      <!-- 560x420   -->
+                      <source data-srcset="img/news-01.webp" type="image/webp">
+                      <img class="b-lazy" data-src="img/news-01.jpg" src=data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw== alt="Картинка" width="480" height="360">
+                    </picture>
+                  </div>
+                  <div class="card-vert__text">
+                    <h3>Caption</h3>
+                    <p>Quis aute commodo Lorem culpa commodo ut elit et dolore exercitation aliqua... Lorem ipsum dolor sit amet.</p>
+                    <a href="article.html" class="btn">Read More</a>
+                  </div>
+                </div>
+              </div>
+
+              <div class="col-1-3">
+                <div class="card-vert">
+                  <div class="embed-responsive  embed-responsive--4-3  card-vert__img">
+                    <picture>
+                      <source data-srcset="img/news-01.webp" media="(min-width: 992px)" type="image/webp">
+                      <source data-srcset="img/news-01.jpg" media="(min-width: 992px)">
+                      <!-- 365x274   -->
+                      <source data-srcset="img/news-01.webp" media="(min-width: 768px)" type="image/webp">
+                      <source data-srcset="img/news-01.jpg" media="(min-width: 768px)">
+                      <!-- 426x320   -->
+                      <source data-srcset="img/news-01.webp" media="(min-width: 480px)" type="image/webp">
+                      <source data-srcset="img/news-01.jpg" media="(min-width: 480px)">
+                      <!-- 560x420   -->
+                      <source data-srcset="img/news-01.webp" type="image/webp">
+                      <img class="b-lazy" data-src="img/news-01.jpg" src=data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw== alt="Картинка" width="480" height="360">
+                    </picture>
+                  </div>
+                  <div class="card-vert__text">
+                    <h3>Caption</h3>
+                    <p>Quis aute commodo Lorem culpa commodo ut elit et dolore exercitation aliqua...</p>
+                    <ul>
+                      <li>Quis aute commodo Lorem culpa commodo</li>
+                      <li>Quis aute commodo Lorem culpa commodo</li>
+                      <li>Quis aute commodo Lorem culpa commodo</li>
+                    </ul>
+                    <a href="article.html" class="btn">Read More</a>
+                  </div>
+                </div>
+              </div>
+
+            </div>
+
+            <div class="row">
+              <div class="col-1-3  col-1-3--btn">
+                <a href="news.html" class="btn">All news</a>
+              </div>
+            </div>
+
+          </div>
+        </section>
+
       </main>
 
     </div>
@@ -224,6 +430,8 @@
     </div>
 
   </div>
+
+  @@include('blocks/callback-modal/callback-modal.html')
 
   @@include('blocks/mmenu/mmenu.html')
 

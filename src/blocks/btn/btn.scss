@@ -1,37 +1,60 @@
-// В этом файле должны быть стили для БЭМ-блока btn, его элементов,
-// модификаторов, псевдоселекторов, псевдоэлементов, @media-условий...
-// Очередность: http://nicothin.github.io/idiomatic-pre-CSS/#priority
-
 .btn {
 
   $block-name:                &; // #{$block-name}__element
 
   box-sizing: border-box;
   display: inline-block;
+  position: relative;
   margin: 0;
-  // padding: $field-padding-vertical  $field-padding-horizontal;
-  white-space: nowrap;
+  padding-top: $field-padding-vertical-mob;
+  padding-bottom: $field-padding-vertical-mob;
+  padding-left: 40px;
+  padding-right: 25px;
+  white-space: wrap;
   vertical-align: middle;
   user-select: none;
-  text-align: center;
-  font-size: 1em;
+  text-align: left;
+  font-size: 20px;
+  font-weight: 500;
   font-family: inherit;
   line-height: $line-height;
   text-decoration: none;
   text-transform: none;
   color: $text-color;
-  border-radius: $border-radius;
-  border: 1px solid $gray-lighter;
-  background-color: $gray-lightest;
-  background-image: none;
+  background-color: $main-color;
+  border: 2px solid $main-color;
   cursor: pointer;
+
+  @media (min-width: $screen-md) {
+    padding-top: $field-padding-vertical-desc;
+    padding-bottom: $field-padding-vertical-desc;
+  }
+
+  &::after {
+    position: absolute;
+    top: 50%;
+    right: 22px;
+    transform: translateY(-50%);
+    display: block;
+    content: "";
+    width: 5px;
+    height: 10px;
+    background: svg-load('../blocks/btn/bg-img/arrow-right.svg', fill=$text-color);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 5px 10px;
+  }
 
   &:hover,
   &:focus {
-    text-decoration: none;
-    color: $text-color;
-    // background-color: darken($gray-lightest, 10%);
-    // border-color: darken($gray-lighter, 12%);
+    color: $main-color;
+    background-color: $btn-bg;
+    border-color: $btn-bg;
+    box-shadow: $shadow-btn--hover;
+
+    &::after {
+      background: svg-load('../blocks/btn/bg-img/arrow-right.svg', fill=$main-color);
+    }
   }
 
   &:active,
@@ -44,7 +67,7 @@
     // opacity: $opacity;
     cursor: not-allowed;
     color: $text-color;
-    background-color: $gray-lightest;
+    background-color: $gray-lighter;
     border-color: $gray-lighter;
 
     @at-root a.btn--disabled {
@@ -52,30 +75,37 @@
     }
   }
 
-  // &__icon {
-  //   display: inline-block;
-  //   vertical-align: middle;
-  // }
+  &--inverted {
+    color: $main-color;
+    background-color: $btn-bg;
+    border-color: $main-color;
 
+    &::after {
+      background: svg-load('../blocks/btn/bg-img/arrow-right.svg', fill=$main-color);
+    }
 
+    &:hover,
+    &:focus {
+      color: $text-color;
+      background-color: $main-color;
+      border-color: $main-color;
 
-  // &--main {
-  //   color: #fff;
-  //   background-color: $color-main;
-  //   border: 1px solid $color-main;
+      &::after {
+        background: svg-load('../blocks/btn/bg-img/arrow-right.svg', fill=$text-color);
+      }
+    }
 
-  //   &:hover,
-  //   &:focus {
-  //     color: #fff;
-  //     background-color: darken($color-main, 10%);
-  //     border-color: darken($color-main, 12%);
-  //   }
+    &--disabled,
+    &:disabled {
+      // opacity: $opacity;
+      cursor: not-allowed;
+      color: $text-color;
+      background-color: $gray-lighter;
+      border-color: $gray-lighter;
 
-  //   &--disabled,
-  //   &:disabled {
-  //     color: #fff;
-  //     background-color: $color-main;
-  //     border-color: $color-main;
-  //   }
-  // }
+      @at-root a.btn--disabled {
+        pointer-events: none;
+      }
+    }
+  }
 }

@@ -1,6 +1,4 @@
 .lang-switcher {
-  //@include col(xs, 5, $grid-columns, 20px);
-  //@include col(md, 2);
   display: flex;
   flex-wrap: wrap;
   justify-content: flex-end;
@@ -15,62 +13,81 @@
   $block-name:                &; // #{$block-name}__element
 
   .dropdown-toggle {
-    padding: 5px 10px;
-    font-family: $font-family;
-    //font-size: $font-size--mob;
-    //font-weight: 500;
+    display: inline-flex;
+    justify-content: flex-start;
+    align-items: center;
+    min-width: 48px;
+    height: 32px;
+    padding: 0;
     text-transform: uppercase;
     user-select: none;
     cursor: pointer;
     color: inherit;
-    background-color: $white;
+    background-color: rgba(255, 255, 255, 0);
     border: none;
     box-shadow: $shadow;
 
     &:hover,
     &:focus {
       color: $main-color;
+
+      &::after {
+        background: svg-load('../blocks/phone-dropdown/bg-img/arrow-down.svg', fill=$main-color);
+      }
     }
 
     &::after {
-      display: none;
-    }
-
-    &::before {
-      display: inline-block;
-      vertical-align: middle;
       content: "";
-      width: 16px;
-      height: 10px;
-      margin-right: 10px;
-      //background: svg-load('../blocks/sprite-svg/svg/bottom-arrow-s.svg', fill=$main-color, stroke=rgba(255, 255, 255, 0));
-      background: svg-load('../blocks/lang-switcher/bg-img/bottom-arrow-s.svg', fill=$main-color, stroke=rgba(255, 255, 255, 0));
+      width: 10px;
+      height: 5px;
+      margin-left: 0;
+      background: svg-load('../blocks/phone-dropdown/bg-img/arrow-down.svg', fill=$white);
       background-repeat: no-repeat;
       background-position: center;
-      background-size: 100%;
-      transition: transform $transition-time ease-out;
+      background-size: 10px 5px;
+      border: none;
     }
 
     &[aria-expanded=true] {
-      &::before {
-        transform: rotate(180deg) translateY(2px);
+
+      &::after {
+        transform: rotate(180deg);
       }
+    }
+
+    svg {
+      width: 26px;
+      height: 26px;
+      margin-right: 10px;
     }
   }
 
   .dropdown-menu {
-    min-width: 65px;
+    width: 100%;
+    min-width: 45px;
+    background-color: $second-color;
+    color: $white;
+    border: none;
+
+    li {
+      margin-bottom: 8px;
+
+      &:last-child {
+        margin-bottom: 0;
+      }
+    }
   }
 
   .dropdown-item {
     font-family: $font-family;
-    //font-size: $font-size--mob;
-    //font-weight: 500;
-    padding-right: 5px;
+    font-weight: 600;
+    padding: 5px 0;
+    text-align: center;
     color: inherit;
 
     &:hover,
     &:focus {
+      background-color: inherit;
       color: $main-color;
     }
   }

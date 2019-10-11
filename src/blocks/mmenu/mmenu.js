@@ -2,17 +2,26 @@ jQuery(document).ready(function( $ ) {
   $("#offcanvas").mmenu({
    "extensions": [
      "pagedim-black",
+     "position-front",
      "position-right",
-     "theme-dark"
+     "theme-dark",
+     "border-none"
    ],
    "navbars": [
-     {
-       "position": "bottom",
-       "content": [
-       "<a class='' href='#'>Call me back</a>"
-       ]
-     }
-   ]
+      {
+        "position": "top",
+        "content": [
+          "breadcrumbs",
+          "close"
+        ]
+      },
+      {
+        "position": "bottom",
+        "content": [
+          "<a class='' href='#'>Call me back</a>"
+        ]
+      }
+    ]
   },
   {
     // configuration

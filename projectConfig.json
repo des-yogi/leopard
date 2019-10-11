@@ -52,7 +52,10 @@
     "page-404": [],
     "page-success": [],
     "placeholder": [],
-    "section": []
+    "section": [],
+    "phone-dropdown": [],
+    "callback-btn": [],
+    "callback-modal": []
   },
   "addCssBefore": [
     "./src/scss/variables.scss",
