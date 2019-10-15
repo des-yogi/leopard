@@ -3,9 +3,9 @@ document.addEventListener('DOMContentLoaded', function() {
   var partnersSlider = new Swiper ('.partners-slider__container', {
     initialSlide: 1,
     slidesPerView: 2,
-    spaceBetween: 30,
+    spaceBetween: 0,
     loop: true,
-    centeredSlides: true,
+    //centeredSlides: true,
     breakpoints: {
     // when window width is >= 480px
     480: {
@@ -13,14 +13,16 @@ document.addEventListener('DOMContentLoaded', function() {
     },
     // when window width is >= 640px
     768: {
-      slidesPerView: 4,
-      spaceBetween: 60
+      slidesPerView: 4
     },
     992: {
       slidesPerView: 5
     },
     1280: {
       slidesPerView: 6
+    },
+    1400: {
+      slidesPerView: 7
     }
   }
   })

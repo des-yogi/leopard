@@ -3,14 +3,15 @@
   $block-name:                &; // #{$block-name}__element
 
   box-sizing: border-box;
-  display: inline-block;
-  position: relative;
+  display: inline-flex;
+  align-items: center;
+  //position: relative;
   margin: 0;
   padding-top: $field-padding-vertical-mob;
   padding-bottom: $field-padding-vertical-mob;
   padding-left: 40px;
-  padding-right: 25px;
-  white-space: wrap;
+  padding-right: 40px;
+  white-space: normal;
   vertical-align: middle;
   user-select: none;
   text-align: left;
@@ -22,6 +23,10 @@
   text-transform: none;
   color: $text-color;
   background-color: $main-color;
+  background-image: svg-load('../blocks/btn/bg-img/arrow-right.svg', fill=$text-color);
+  background-repeat: no-repeat;
+  background-position: right 22px center;
+  background-size: 5px 10px;
   border: 2px solid $main-color;
   cursor: pointer;
 
@@ -30,31 +35,13 @@
     padding-bottom: $field-padding-vertical-desc;
   }
 
-  &::after {
-    position: absolute;
-    top: 50%;
-    right: 22px;
-    transform: translateY(-50%);
-    display: block;
-    content: "";
-    width: 5px;
-    height: 10px;
-    background: svg-load('../blocks/btn/bg-img/arrow-right.svg', fill=$text-color);
-    background-repeat: no-repeat;
-    background-position: center;
-    background-size: 5px 10px;
-  }
-
   &:hover,
   &:focus {
     color: $main-color;
     background-color: $btn-bg;
     border-color: $btn-bg;
     box-shadow: $shadow-btn--hover;
-
-    &::after {
-      background: svg-load('../blocks/btn/bg-img/arrow-right.svg', fill=$main-color);
-    }
+    background-image: svg-load('../blocks/btn/bg-img/arrow-right.svg', fill=$main-color);
   }
 
   &:active,
@@ -78,21 +65,15 @@
   &--inverted {
     color: $main-color;
     background-color: $btn-bg;
+    background-image: svg-load('../blocks/btn/bg-img/arrow-right.svg', fill=$main-color);
     border-color: $main-color;
-
-    &::after {
-      background: svg-load('../blocks/btn/bg-img/arrow-right.svg', fill=$main-color);
-    }
 
     &:hover,
     &:focus {
       color: $text-color;
       background-color: $main-color;
       border-color: $main-color;
-
-      &::after {
-        background: svg-load('../blocks/btn/bg-img/arrow-right.svg', fill=$text-color);
-      }
+      background-image: svg-load('../blocks/btn/bg-img/arrow-right.svg', fill=$text-color);
     }
 
     &--disabled,

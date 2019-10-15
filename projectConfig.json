@@ -43,7 +43,7 @@
     "card-vert": [],
     "card-horiz": [],
     "copyrights": [],
-    "partnership-form": [],
+    "partnership": [],
     "about": [],
     "partners-worldwide": [],
     "career": [],
@@ -61,7 +61,7 @@
     "./src/scss/variables.scss",
     "./src/scss/mixins.scss",
     "../../node_modules/swiper/css/swiper.css",
-    "../../node_modules/jquery.mmenu/dist/jquery.mmenu.all.css"
+    "./src/blocks/mmenu/mmenu.scss"
   ],
   "addCssAfter": [
     "./src/scss/print.scss"

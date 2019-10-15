@@ -1,7 +1,7 @@
 .index-slider {
   padding-top: 90px;
   padding-bottom: 25px;
-  margin-bottom: 40px;
+  margin-bottom: 50px;
   background-color: $btn-bg;
   //background-image: url(../img/index-slide-bg.jpg);
   background-repeat: no-repeat;
@@ -9,7 +9,7 @@
   background-position: center;
 
   @media (min-width: $screen-xl) {
-    margin-bottom: 55px;
+    margin-bottom: 57px;
   }
 
   @media (min-width: $screen-xxl) {

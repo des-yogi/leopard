@@ -7,7 +7,7 @@
 @import './src/scss/variables.scss';
 @import './src/scss/mixins.scss';
 @import '../../node_modules/swiper/css/swiper.css';
-@import '../../node_modules/jquery.mmenu/dist/jquery.mmenu.all.css';
+@import './src/blocks/mmenu/mmenu.scss';
 @import './src/blocks/breadcrumbs/breadcrumbs.scss';
 @import './src/blocks/btn/btn.scss';
 @import './src/blocks/burger/burger.scss';
@@ -47,7 +47,7 @@
 @import './src/blocks/card-vert/card-vert.scss';
 @import './src/blocks/card-horiz/card-horiz.scss';
 @import './src/blocks/copyrights/copyrights.scss';
-@import './src/blocks/partnership-form/partnership-form.scss';
+@import './src/blocks/partnership/partnership.scss';
 @import './src/blocks/about/about.scss';
 @import './src/blocks/partners-worldwide/partners-worldwide.scss';
 @import './src/blocks/career/career.scss';

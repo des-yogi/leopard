@@ -260,6 +260,15 @@ a {
   @include col(xs, 12, $grid-columns, 20px);
   @include col(md, 6);
   @include col(xl, 4);
+  margin-bottom: 60px;
+
+  @media (min-width: $screen-md) {
+    margin-bottom: 66px;
+  }
+
+  @media (min-width: $screen-xl) {
+    //margin-bottom: 60px;
+  }
 
   &:nth-child(n+3) {
     display: none;
