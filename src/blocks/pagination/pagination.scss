@@ -5,25 +5,15 @@ $text-color:                  hsl(0, 0%, 10%) !default;
 $border-color:                hsl(0, 0%, 60%) !default;
 
 .pagination {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  margin: 25px 0 50px;
-
-  @media (min-width: $screen-md) {
-    justify-content: flex-start;
-    margin-top: 30px;
-  }
-
-  @media (min-width: $screen-xl) {
-    margin-bottom: 45px;
-  }
+  margin: 0;
 
   $block-name:                &; // #{$block-name}__element
 
   &__list {
     display: flex;
     flex-wrap: wrap;
+    justify-content: center;
+    align-items: baseline;
     margin: 0;
     padding-left: 0;
     list-style: none;
@@ -37,13 +27,38 @@ $border-color:                hsl(0, 0%, 60%) !default;
     }
   }
 
+  &__link {
+    display: inline-block;
+    vertical-align: top;
+    padding: 10px 5px;
+    text-decoration: none;
+    color: currentColor;
+
+    @media (min-width: $screen-md) {
+      padding: 10px 10px;
+    }
+
+    &--prev {
+
+      svg {
+        transform: scale(-1, 1);
+      }
+    }
+
+    &--disabled {
+      color: $text-color;
+      opacity: 0.5;
+      pointer-events: none;
+    }
+  }
+
   &__item {
 
     &.active {
 
       a {
-        color: $white;
-        background-color: $main-color;
+        color: $main-color;
+        //background-color: $main-color;
         pointer-events: none;
       }
     }

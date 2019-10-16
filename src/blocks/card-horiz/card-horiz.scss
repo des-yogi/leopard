@@ -1,9 +1,75 @@
-// В этом файле должны быть стили для БЭМ-блока card-horiz, его элементов, 
-// модификаторов, псевдоселекторов, псевдоэлементов, @media-условий...
-// Очередность: http://nicothin.github.io/idiomatic-pre-CSS/#priority
-
 .card-horiz {
+
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  border-top: 2px solid #fff;
+  border-right: 2px solid $main-color;
+  border-bottom: 2px solid $main-color;
+  border-left: 2px solid #fff;
+
+  @media (min-width: $screen-xl) {
+    flex-direction: row;
+  }
 
   $block-name:                &; // #{$block-name}__element
 
+  &__img {
+    flex-basis: 100%;
+
+    @media (min-width: $screen-xl) {
+      flex: 0 0;
+      flex-basis: 465px;
+    }
+
+    @media (min-width: $screen-xxl) {
+      flex-basis: 507px;
+    }
+  }
+
+  &__text {
+    position: relative;
+    flex: 1 1 auto;
+    display: flex;
+    flex-wrap: wrap;
+    align-content: flex-start;
+    padding: 30px 30px 42px 30px;
+
+    @media (min-width: $screen-xl) {
+      padding: 40px 60px 52px 60px;
+    }
+
+    @media (min-width: $screen-xxl) {
+      padding: 60px 90px 60px 90px;
+    }
+  }
+
+  &__title {
+    width: 100%;
+    margin-top: 0;
+  }
+
+  &__btn-wrapper {
+
+    .btn {
+      position: absolute;
+      width: calc(100% - 60px);
+      bottom: 0;
+      right: 50%;
+      transform: translate(50%, 50%);
+
+      @media (min-width: $screen-xl) {
+        left: none;
+        right: 0;
+        transform: translate(-60px, 50%);
+        //width: calc(100% - 120px);
+        width: 405px;
+      }
+
+      @media (min-width: $screen-xxl) {
+        //width: calc(100% - 180px);
+        transform: translate(-90px, 50%);
+      }
+    }
+  }
 }

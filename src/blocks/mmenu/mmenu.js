@@ -14,13 +14,13 @@ jQuery(document).ready(function( $ ) {
           "breadcrumbs",
           "close"
         ]
-      },
+      }/*,
       {
         "position": "bottom",
         "content": [
-          "<a class='' href='#'>Call me back</a>"
+          "<button class='btn' type='button' data-toggle='modal' data-target='#callback'>Call me back</button>"
         ]
-      }
+      }*/
     ]
   },
   {

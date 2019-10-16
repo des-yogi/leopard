@@ -231,6 +231,10 @@ ul ol {
 
 li {
   line-height: inherit;
+
+  @media (min-width: $container-xxl) {
+    font-size: 18px;
+  }
 }
 
 hr {

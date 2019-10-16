@@ -14,13 +14,25 @@ $toggler-part-bg-color:       #fff !default;
   user-select: none;
   cursor: pointer;
 
+  &:hover,
+  &:focus {
+    > span {
+      background: $main-color;
+
+      &:before,
+      &:after {
+        background: $main-color;
+      }
+    }
+  }
+
   > span {
     display: inline-block;
     width: 100%;
     height: $toggler-part-height;
     background: $toggler-part-bg-color;
     position: relative;
-    transition: background $transition-time $transition-time;
+    transition: background $transition-time;
 
     &:before,
     &:after {
@@ -31,7 +43,8 @@ $toggler-part-bg-color:       #fff !default;
       height: $toggler-part-height;
       background: $toggler-part-bg-color;
       transform-origin: 50% 50%;
-      transition: top $transition-time $transition-time, transform $transition-time;
+      transition: background $transition-time;
+      //transition: top $transition-time $transition-time, transform $transition-time;
     }
 
     &:before {

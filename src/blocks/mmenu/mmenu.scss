@@ -1,4 +1,19 @@
 .mmenu {
+  position: relative;
+
+  &::after {
+    position: absolute;
+    z-index: 2;
+    top: 0;
+    //bottom: 0;
+    left: 30px;
+    display: block;
+    content: "";
+    width: 2px;
+    height: 100%;
+    background-color: $main-color;
+  }
+
   $block-name:                &; // #{$block-name}__element
 }
 
@@ -57,12 +72,20 @@
     -moz-osx-font-smoothing: grayscale
 }
 
+.mm-menu a.btn {
+  text-align: center;
+  font-size: 18px;
+  line-height: 1;
+  color: #fff;
+  background-image: none;
+}
+
 .mm-menu a,
 .mm-menu a:active,
 .mm-menu a:hover,
 .mm-menu a:link,
 .mm-menu a:visited {
-    color: inherit;
+    //color: inherit;
     text-decoration: none
 }
 
@@ -90,10 +113,22 @@
     //background: var(--mm-color-background);
     //border-color: var(--mm-color-border);
     //color: var(--mm-color-text)
+
+    a {
+      font-size: 16px;
+
+      @media (min-width: 768px) {
+        font-size: 20px;
+      }
+
+      @media (min-width: 1280px) {
+        font-size: 24px;
+      }
+    }
 }
 
 .mm-panels {
-    overflow: hidden
+    overflow: hidden;
 }
 
 .mm-panel {
@@ -102,7 +137,7 @@
     overflow-x: hidden;
     overflow-y: auto;
     width: 100%;
-    padding: 0 20px;
+    padding: 30px 20px 30px 52px;
     -webkit-transform: translate3d(100%, 0, 0);
     transform: translate3d(100%, 0, 0);
     -webkit-transition: -webkit-transform .4s ease;
@@ -204,15 +239,24 @@
     -webkit-box-sizing: border-box;
     box-sizing: border-box;
     width: 44px;
-    padding: 0
+    padding: 0;
+
+    &:hover,
+    &:focus {
+      &::after,
+      &::before {
+        border-color: currentColor !important;
+      }
+  }
 }
 
 .mm-btn:after,
 .mm-btn:before {
-    border-color: rgba(0, 0, 0, .1);
+    border-color: rgba(255, 255, 255, 1);
     //border-color: var(--mm-color-button);
     border-width: 2px;
-    border-style: solid
+    border-style: solid;
+    transition: border-color 0.3s ease;
 }
 
 .mm-btn_close:after,
@@ -221,16 +265,17 @@
     -webkit-box-sizing: content-box;
     box-sizing: content-box;
     display: block;
-    width: 5px;
-    height: 5px;
+    width: 12px;
+    height: 12px;
     margin: auto;
     position: absolute;
     top: 0;
     bottom: 0;
     -webkit-transform: rotate(-45deg);
     -ms-transform: rotate(-45deg);
-    transform: rotate(-45deg)
+    transform: rotate(-45deg);
 }
+
 
 .mm-btn_close:before {
     border-right: none;
@@ -241,7 +286,7 @@
 .mm-btn_close:after {
     border-left: none;
     border-top: none;
-    right: 25px
+    right: 35px
 }
 
 .mm-btn_next:after,
@@ -308,7 +353,7 @@
 .mm-navbar {
     background: $second-color;
     border-color: rgba(0, 0, 0, .1);
-    color: rgba(0, 0, 0, .3);
+    color: rgba(255, 255, 255, 0);
     //background: var(--mm-color-background);
     //border-color: var(--mm-color-border);
     //color: var(--mm-color-text-dimmed);
@@ -403,7 +448,23 @@
     display: -ms-flexbox;
     display: flex;
     -ms-flex-wrap: wrap;
-    flex-wrap: wrap
+    flex-wrap: wrap;
+
+    &.active > a {
+      position: relative;
+      color: $main-color;
+      pointer-events: none;
+
+      &::before {
+        position: absolute;
+        top: 50%;
+        left: 0;
+        display: block;
+        content: "";
+        width: 15px;
+        height: 2px;
+        background-color: currentColor;      }
+    }
 }
 
 .mm-listitem:after {
@@ -431,6 +492,11 @@
     //padding-top: calc((var(--mm-listitem-size) - var(--mm-line-height))/ 2);
     padding-bottom: 12px;
     //padding-bottom: calc((var(--mm-listitem-size) - var(--mm-line-height))/ 2)
+
+    @media (min-width: $screen-xl) {
+      padding-top: 19px;
+      padding-bottom: 19px;
+    }
 }
 
 .mm-listitem__text {
@@ -438,21 +504,21 @@
     text-overflow: ellipsis;
     white-space: nowrap;
     overflow: hidden;
-    padding-left: 20px;
-    padding-right: 10px;
+    padding-left: 30px;
+    padding-right: 20px;
     -webkit-box-flex: 1;
     -ms-flex-positive: 1;
     flex-grow: 1;
     -ms-flex-preferred-size: 10%;
-    flex-basis: 10%
+    flex-basis: 10%;
 }
 
 .mm-listitem__btn {
-    -webkit-tap-highlight-color: rgba(255, 255, 255, .4);
-    tap-highlight-color: rgba(255, 255, 255, .4);
+    //-webkit-tap-highlight-color: rgba(255, 255, 255, 0);
+    //tap-highlight-color: rgba(255, 255, 255, 0);
     //-webkit-tap-highlight-color: var(--mm-color-background-emphasis);
     //tap-highlight-color: var(--mm-color-background-emphasis);
-    background: rgba(3, 2, 1, 0);
+    //background: rgba(3, 2, 1, 0);
     border-color: inherit;
     width: auto;
     padding-right: 54px;
@@ -465,13 +531,13 @@
 }
 
 .mm-listitem_selected>.mm-listitem__text {
-    background: rgba(255, 255, 255, .4);
+    //background: rgba(255, 255, 255, .4);
     //background: var(--mm-color-background-emphasis)
 }
 
 .mm-listitem_opened>.mm-listitem__btn,
 .mm-listitem_opened>.mm-panel {
-    background: rgba(0, 0, 0, .05);
+    //background: rgba(0, 0, 0, .05);
     //background: var(--mm-color-background-highlight)
 }
 
@@ -571,7 +637,7 @@
 .mm-menu_offcanvas {
     width: 80%;
     min-width: 240px;
-    max-width: 440px
+    max-width: 440px;
 }
 
 .mm-wrapper_opening .mm-menu_offcanvas.mm-menu_opened~.mm-slideout {
@@ -602,7 +668,7 @@
     position: fixed;
     top: 0;
     left: 0;
-    z-index: 2
+    z-index: 2;
 }
 
 .mm-wrapper_blocking {
@@ -1367,6 +1433,7 @@
 }
 
 .mm-navbars_top {
+  margin-top: 10px;
     border-bottom-style: solid;
     border-bottom-width: 1px;
     top: 0;
@@ -1397,7 +1464,10 @@
     border-top-style: solid;
     border-top-width: 1px;
     bottom: 0;
-    top: auto
+    top: auto;
+    margin-bottom: 20px;
+    padding-left: 30px;
+    padding-right: 20px;
 }
 
 .mm-menu_navbar_bottom-1 .mm-panels {
@@ -1443,7 +1513,7 @@
     -webkit-overflow-scrolling: touch;
     overflow-x: auto;
     text-align: left;
-    padding: 0 0 0 20px
+    padding: 0 0 0 60px
 }
 
 .mm-navbar__breadcrumbs>* {
@@ -1761,7 +1831,7 @@
 
 .mm-menu_selected-hover .mm-listitem__btn:hover,
 .mm-menu_selected-hover .mm-listitem__text:hover {
-    background: rgba(255, 255, 255, .4);
+    //background: rgba(255, 255, 255, .4);
     //background: var(--mm-color-background-emphasis)
 }
 
@@ -1771,7 +1841,7 @@
 
 .mm-menu_selected-parent .mm-listitem_selected-parent>.mm-listitem__btn,
 .mm-menu_selected-parent .mm-listitem_selected-parent>.mm-listitem__text {
-    background: rgba(255, 255, 255, .4);
+    //background: rgba(255, 255, 255, .4);
     //background: var(--mm-color-background-emphasis)
 }
 
@@ -2384,7 +2454,7 @@ input.mm-check:checked~label.mm-check:before {
 }
 
 .mm-listview_inset .mm-listitem {
-    padding: 5px 0
+    padding: 5px 0;
 }
 
 .mm-menu_multiline .mm-listitem__text,

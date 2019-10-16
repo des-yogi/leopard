@@ -256,6 +256,17 @@ a {
   @include col(md, 6);
 }
 
+.col-1-2-1 {
+  @include col(xs, 12, $grid-columns, 20px);
+  @include col(md, 6);
+  @include col(xl, 12);
+  margin-bottom: 60px;
+
+  @media (min-width: $screen-md) {
+    margin-bottom: 66px;
+  }
+}
+
 .col-1-3 {
   @include col(xs, 12, $grid-columns, 20px);
   @include col(md, 6);
@@ -282,6 +293,40 @@ a {
     @include col-offset(md, 6);
     @include col-offset(xl, 8);
     margin-bottom: 0 !important;
+  }
+
+  &--9 {
+
+    &:nth-child(n+3) {
+      display: block;
+    }
+
+    &:nth-child(n+5) {
+      display: none;
+
+      @media (min-width: $screen-xl) {
+        display: block;
+      }
+    }
+  }
+
+  &--nohide {
+    margin-bottom: 40px;
+
+    &:nth-child(n+3) {
+      display: block;
+    }
+  }
+}
+
+.col-1-1-3 {
+  @include col(xs, 12, $grid-columns, 20px);
+  @include col(md, 12);
+  @include col(xl, 4);
+  margin-bottom: 40px;
+
+  @media (min-width: $screen-md) {
+    margin-bottom: 66px;
   }
 }
 
@@ -327,7 +372,108 @@ a {
   }
 }
 
+.col-article {
+  @include col(xs, 12, $grid-columns, 20px);
+  @include col(md, 12);
+  @include col-offset(xl, 2);
+  @include col(xl, 8);
+}
 
+.main-content {
+
+  &__header {
+    min-height: 300px;
+    padding-top: 80px;
+    padding-bottom: 120px;
+
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+
+    @media (min-width: $screen-md) {
+      padding-top: 40px;
+    }
+
+    @media (min-width: $screen-xl) {
+      min-height: 500px;
+      padding-bottom: 180px;
+    }
+
+    @media (min-width: $screen-xxl) {
+      padding-top: 60px;
+    }
+  }
+
+  &__content {
+    padding-bottom: 40px;
+    margin-top: -60px; // подъем на полоаину высоты нижнего паддинга
+
+    @media (min-width: $screen-xl) {
+      padding-bottom: 60px;
+      margin-top: -90px;
+    }
+  }
+
+  &__title {
+    margin-top: 0;
+    color: $main-color;
+
+    @media (min-width: $screen-xl) {
+      //margin-bottom: 40px;
+    }
+  }
+
+  &__descr {
+    font-size: 26px;
+    font-weight: 500;
+
+    @media (min-width: $screen-xl) {
+      font-size: 32px;
+    }
+  }
+}
+
+.publishedon {
+  display: block;
+  margin-bottom: 10px;
+  font-size: 16px;
+  color: inherit;
+  opacity: 0.7;
+
+  @media (min-width: $screen-xl) {
+    margin-bottom: 20px;
+    font-size: 18px;
+  }
+}
+
+.article {
+  margin-bottom: 125px;
+  border-bottom: 2px solid $main-color;
+
+  @media (min-width: $screen-xxl) {
+    margin-bottom: 200px;
+  }
+
+  img,
+  .embed-responsive {
+    display: block;
+    width: 100%;
+    margin: 30px auto;
+
+    @media (min-width: $screen-md) {
+      max-width: 438px;
+      margin: 40px auto;
+    }
+
+    @media (min-width: $screen-xl) {
+      max-width: 570px;
+    }
+
+    @media (min-width: $screen-xxl) {
+      max-width: 790px;
+    }
+  }
+}
 
 /* &__element {
   @include col(); // малые ширины — 12 из 12, промежутки по умолчанию

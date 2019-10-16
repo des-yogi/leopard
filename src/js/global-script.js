@@ -72,3 +72,4 @@ if(~navigator.appVersion.indexOf("Linux"))cth('linux');
     agreementCheckbox.addEventListener('change', agreementHandler);
   }
 })();
+

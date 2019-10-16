@@ -30,7 +30,7 @@ $second-color:                #191a1e;
 
 $text-color:                  #fff;
 $title-color:                 #fff;
-$text-muted:                  #bdbdbd;
+$text-muted:                  $gray-lightest;
 
 $body-bg:                     $second-color;
 $btn-bg:                      #161717;
@@ -87,7 +87,7 @@ $grid-gutter-width:           60px;
 
 // Разное
 
-$field-padding-vertical:        5px;
+$field-padding-vertical:        8px;
 $field-padding-vertical-mob:    5px;
 $field-padding-vertical-desc:   10px;
 $field-padding-horizontal:      20px;
