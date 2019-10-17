@@ -1,6 +1,5 @@
 {
   "blocks": {
-    "accordion": [],
     "breadcrumbs": [],
     "btn": [],
     "burger": [],
@@ -8,30 +7,61 @@
     "dropdown": [],
     "embed-responsive": [],
     "form": [],
-    "is-mobile": [],
+    "field-text": [
+      "--error"
+    ],
+    "field-checkbox": [
+      "__input-wrap--error"
+    ],
+    "field-radio": [
+      "__input-wrap--error"
+    ],
+    "field-file": [
+      "--error"
+    ],
+    "field-actions": [],
     "lang-switcher": [],
-    "loader": [],
     "logo": [],
-    "main-nav": [],
     "modal": [],
     "object-fit-polyfill": [],
     "page": [],
     "page-footer": [],
     "page-header": [],
     "pagination": [],
-    "scroll-link": [],
     "sprite-svg": [],
     "table": [],
     "table-mobile-scroll": [],
-    "table-responsive": [],
-    "tabs": [],
-    "to-top": [],
     "typo": [],
-    "social": []
+    "mmenu": [],
+    "media-card": [],
+    "text-card": [],
+    "socials": [],
+    "messengers": [],
+    "index-slider": [],
+    "tel-dropdown": [],
+    "partners-slider": [],
+    "card-vert": [],
+    "card-horiz": [],
+    "copyrights": [],
+    "partnership": [],
+    "about": [],
+    "partners-worldwide": [],
+    "career": [],
+    "resume-form": [],
+    "contacts": [],
+    "page-404": [],
+    "page-success": [],
+    "placeholder": [],
+    "section": [],
+    "phone-dropdown": [],
+    "callback-btn": [],
+    "callback-modal": []
   },
   "addCssBefore": [
     "./src/scss/variables.scss",
-    "./src/scss/mixins.scss"
+    "./src/scss/mixins.scss",
+    "../../node_modules/swiper/css/swiper.css",
+    "./src/blocks/mmenu/mmenu.scss"
   ],
   "addCssAfter": [
     "./src/scss/print.scss"
@@ -41,10 +71,12 @@
     "./node_modules/picturefill/dist/picturefill.min.js",
     "./node_modules/blazy/blazy.min.js",
     "./node_modules/svg4everybody/dist/svg4everybody.js",
+    "./node_modules/swiper/js/swiper.js",
     "./node_modules/jquery/dist/jquery.min.js",
+    "./node_modules/jquery.mmenu/dist/jquery.mmenu.all.js",
     "./node_modules/object-fit-images/dist/ofi.js",
     "./src/js/libs/popper.min.js",
-    "./src/js/libs/util.min.js"
+    "./src/js/libs/util.js"
   ],
   "addJsAfter": [
     "./src/js/global-script.js"

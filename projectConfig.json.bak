@@ -1,0 +1,94 @@
+{
+  "blocks": {
+    "breadcrumbs": [],
+    "btn": [],
+    "burger": [],
+    "close": [],
+    "dropdown": [],
+    "embed-responsive": [],
+    "form": [],
+    "field-text": [
+      "--error"
+    ],
+    "field-checkbox": [
+      "__input-wrap--error"
+    ],
+    "field-radio": [
+      "__input-wrap--error"
+    ],
+    "field-file": [
+      "--error"
+    ],
+    "field-actions": [],
+    "lang-switcher": [],
+    "logo": [],
+    "modal": [],
+    "object-fit-polyfill": [],
+    "page": [],
+    "page-footer": [],
+    "page-header": [],
+    "pagination": [],
+    "sprite-svg": [],
+    "table": [],
+    "table-mobile-scroll": [],
+    "typo": [],
+    "mmenu": [],
+    "media-card": [],
+    "text-card": [],
+    "socials": [],
+    "messengers": [],
+    "index-slider": [],
+    "tel-dropdown": [],
+    "partners-slider": [],
+    "card-vert": [],
+    "card-horiz": [],
+    "copyrights": [],
+    "partnership-form": [],
+    "about": [],
+    "partners-worldwide": [],
+    "career": [],
+    "resume-form": [],
+    "contacts": [],
+    "page-404": [],
+    "page-success": [],
+    "placeholder": [],
+    "section": [],
+    "phone-dropdown": [],
+    "callback-btn": [],
+    "callback-modal": []
+  },
+  "addCssBefore": [
+    "./src/scss/variables.scss",
+    "./src/scss/mixins.scss",
+    "../../node_modules/swiper/css/swiper.css",
+    "../../node_modules/jquery.mmenu/dist/jquery.mmenu.all.css"
+  ],
+  "addCssAfter": [
+    "./src/scss/print.scss"
+  ],
+  "singleCompiled": [],
+  "addJsBefore": [
+    "./node_modules/picturefill/dist/picturefill.min.js",
+    "./node_modules/blazy/blazy.min.js",
+    "./node_modules/svg4everybody/dist/svg4everybody.js",
+    "./node_modules/swiper/js/swiper.js",
+    "./node_modules/jquery/dist/jquery.min.js",
+    "./node_modules/jquery.mmenu/dist/jquery.mmenu.all.js",
+    "./node_modules/object-fit-images/dist/ofi.js",
+    "./src/js/libs/popper.min.js",
+    "./src/js/libs/util.js"
+  ],
+  "addJsAfter": [
+    "./src/js/global-script.js"
+  ],
+  "addImages": [
+    "./src/img/*.{jpg,jpeg,gif,png,svg,ico,webp}"
+  ],
+  "copiedCss": [],
+  "copiedJs": [],
+  "dirs": {
+    "srcPath": "./src/",
+    "buildPath": "./build/",
+    "blocksDirName": "blocks"
+  }
+}

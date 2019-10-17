@@ -1,0 +1,293 @@
+<!DOCTYPE html>
+<html class="no-js  page" lang="en" prefix="og: https://ogp.me/ns#">
+
+<head>
+  <meta charset="utf-8">
+  <title>About us</title>
+  @@include('_include/page_head.html')
+
+  <!-- preload для немедленной предзагрузки, prefetch - загрузка для след. страницы
+  <link rel="preload" href="https://www.amcharts.com/lib/3/ammap.js" as="script">
+  <link rel="preload" href="https://www.amcharts.com/lib/3/maps/js/worldLow.js" as="script">
+-->
+
+  <script type="text/javascript" src="https://www.amcharts.com/lib/3/ammap.js"></script>
+  <script type="text/javascript" src="https://www.amcharts.com/lib/3/maps/js/worldLow.js"></script>
+  <script>
+    AmCharts.makeChart("map",{
+      "type": "map",
+      "pathToImages": "http://www.amcharts.com/lib/3/images/",
+      "addClassNames": true,
+      "fontSize": 15,
+      "color": "#FFFFFF",
+      "projection": "equirectangular",
+      "backgroundAlpha": 1,
+      "backgroundColor": "rgba(25,26,30,1)",
+      "dataProvider": {
+        "map": "worldLow",
+        "getAreasFromMap": true,
+        /*"images": [
+          {
+            "top": 40,
+            "left": 60,
+            "width": 80,
+            "height": 40,
+            "pixelMapperLogo": true,
+            "imageURL": "http://pixelmap.amcharts.com/static/img/logo.svg",
+            "url": "http://www.amcharts.com"
+          }
+        ],*/
+        "areas": [
+          {
+            "id": "UA",
+            "title": "Ukraine",
+            "color": "rgba(0,188,104,1)" // настройки цвета стран
+          },
+          {
+            "id": "PL",
+            "title": "Poland",
+            "color": "rgba(255,0,0,1)"
+          }
+        ]
+      },
+      "balloon": {
+        "horizontalPadding": 15,
+        "borderAlpha": 0,
+        "borderThickness": 1,
+        "verticalPadding": 15
+      },
+      "areasSettings": {
+        "color": "rgba(0,0,0,1)",
+        "outlineColor": "rgba(36,36,36,1)",
+        "rollOverOutlineColor": "rgba(36,36,36,1)",
+        "rollOverBrightness": 20,
+        "selectedBrightness": 20,
+        "selectable": true,
+        "unlistedAreasAlpha": 0,
+        "unlistedAreasOutlineAlpha": 0
+      },
+      "imagesSettings": {
+        "alpha": 1,
+        "color": "rgba(0,0,0,1)",
+        "outlineAlpha": 0,
+        "rollOverOutlineAlpha": 0,
+        "outlineColor": "rgba(36,36,36,1)",
+        "rollOverBrightness": 20,
+        "selectedBrightness": 20,
+        "selectable": true
+      },
+      "linesSettings": {
+        "color": "rgba(0,0,0,1)",
+        "selectable": true,
+        "rollOverBrightness": 20,
+        "selectedBrightness": 20
+      },
+      "zoomControl": {
+        "zoomControlEnabled": true,
+        "homeButtonEnabled": false,
+        "panControlEnabled": false,
+        "right": 0,
+        "bottom": 0,
+        "minZoomLevel": 0.5,
+        "gridHeight": 100,
+        "gridAlpha": 0.1,
+        "gridBackgroundAlpha": 0,
+        "gridColor": "#FFFFFF",
+        "draggerAlpha": 1,
+        "buttonCornerRadius": 2
+      }
+    });
+  </script>
+</head>
+
+<body>
+<noscript>You have javascript disabled. We apologize, but this makes it difficult to use this site. У вас отключен JavaScript. Приносим наши извинения, но это делает затруднительным использование данного сайта.</noscript>
+
+  <div id="content-wrapper" class="page__inner">
+
+    <div class="page__content">
+      @@include('blocks/page-header/page-header.html')
+
+      <main class="main-content  main-content--noindex" role="main">
+
+        @@include('blocks/callback-btn/callback-btn.html')
+
+        <article class="article">
+
+          <div class="main-content__header" style="background-image: url(./img/about-header-bg.jpg);">
+            <div class="container">
+
+              @@include('blocks/breadcrumbs/breadcrumbs.html')
+
+              <div class="row">
+                <div class="col-1-2">
+                  <h1 class="main-content__title">Contacts</h1>
+                  <p class="main-content__descr">Business & Beyond</p>
+                </div>
+              </div>
+
+            </div>
+          </div>
+
+          <div class="main-content__content">
+            <div class="container">
+              <div class="row">
+
+                <div class="col-1-1-3">
+                  <h2>About Us</h2>
+                  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Provident nobis distinctio optio quam modi ipsa. Officia itaque, tempore dignissimos mollitia deserunt adipisci, aspernatur voluptatem assumenda, a alias quis ea reiciendis quibusdam tempora in impedit tenetur? Odit deserunt, laboriosam voluptatibus ex. Odit asperiores ducimus aperiam! Laudantium pariatur temporibus, facilis rem quo ad ab natus ut expedita quod, ratione maxime officiis nisi odio aliquid voluptate aut inventore. Ut saepe modi vitae asperiores alias cum facere ipsum perferendis.</p>
+                </div>
+
+                <div class="col-1-3  col-1-3--nohide">
+                  <h2>Our Vision</h2>
+                  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Provident nobis distinctio optio quam modi ipsa. Officia itaque, tempore dignissimos mollitia deserunt adipisci, aspernatur voluptatem assumenda, a alias quis ea reiciendis quibusdam tempora in impedit tenetur? Odit deserunt, laboriosam voluptatibus ex. Odit asperiores ducimus aperiam! Laudantium pariatur temporibus, facilis rem quo ad ab natus ut expedita quod, ratione maxime officiis nisi odio aliquid voluptate aut inventore. Ut saepe modi vitae asperiores alias cum facere ipsum perferendis.</p>
+                </div>
+
+                <div class="col-1-3  col-1-3--nohide">
+                  <h2>Our Mission</h2>
+                  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Provident nobis distinctio optio quam modi ipsa. Officia itaque, tempore dignissimos mollitia deserunt adipisci, aspernatur voluptatem assumenda, a alias quis ea reiciendis quibusdam tempora in impedit tenetur? Odit deserunt, laboriosam voluptatibus ex. Odit asperiores ducimus aperiam! Laudantium pariatur temporibus, facilis rem quo ad ab natus ut expedita quod, ratione maxime officiis nisi odio aliquid voluptate aut inventore. Ut saepe modi vitae asperiores alias cum facere ipsum perferendis.</p>
+                </div>
+
+              </div>
+            </div>
+          </div>
+
+        </article>
+
+        <section class="section  section--padding-b  partnership">
+          <div class="container">
+            <h2 class="section__title">Partnership</h2>
+            <div class="row">
+              <div class="col-1-2  partnership__intro-col">
+                <div class="partnership__intro">
+                  <p class="h4">Let's start cooperation today.</p>
+                  <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Amet cras urna, malesuada euismod. Vulputate non suspendisse consequat volutpat, tellus. Nisi ac sit lacus, mauris.</p>
+                </div>
+              </div>
+            </div>
+
+            <form class="partnership__form" id="partnershipForm" action="/" method="post">
+
+              <div class="partnership__form-info">
+                <p class="h4">Fill the form, please</p>
+                <p class="partnership__form-note">Fields marked with * are required!</p>
+              </div>
+
+              <div class="row">
+
+                <div class="partnership__form-col">
+                  <label class="field-text">
+                    <span class="field-text__input-wrap">
+                      <input class="field-text__input  field-text__input--required" type="text" name="name" value="" placeholder="Your name">
+                      <span class="field-text__help-text  error"></span>
+                    </span>
+                  </label>
+
+                  <label class="field-text">
+                    <span class="field-text__input-wrap">
+                      <input class="field-text__input" type="text" name="company" value="" placeholder="Company Name">
+                      <span class="field-text__help-text  error"></span>
+                    </span>
+                  </label>
+                </div>
+
+                <div class="partnership__form-col">
+                  <label class="field-text">
+                    <span class="field-text__input-wrap">
+                      <input class="field-text__input  field-text__input--required" type="tel" name="tel" value="" placeholder="Phone">
+                      <span class="field-text__help-text  error"></span>
+                    </span>
+                  </label>
+
+                  <label class="field-text">
+                    <span class="field-text__input-wrap">
+                      <input class="field-text__input  field-text__input--required" type="email" name="email" value="" placeholder="Email">
+                      <span class="field-text__help-text  error"></span>
+                    </span>
+                  </label>
+                </div>
+
+                <div class="partnership__form-col  partnership__form-col--flex">
+                  <label class="field-text  field-text--nomargin">
+                    <span class="field-text__input-wrap">
+                      <textarea class="field-text__input" name="message" value="" placeholder="Message"></textarea>
+                      <span class="field-text__help-text  error"></span>
+                    </span>
+                  </label>
+                </div>
+
+                <div class="partnership__form-col">
+                  <div class="field-actions">
+                    <input class="btn  partnership__submit" type="submit" name="submit" value="Submit">
+                  </div>
+                  <div class="field-checkbox">
+                    <label class="field-checkbox__name">
+                      <input id="agreement" class="field-checkbox__input" type="checkbox" checked>
+                      <span class="field-checkbox__name-text  partnership__agreement-text">I consent to the processing of personal data</span>
+                    </label>
+                  </div>
+                </div>
+
+              </div>
+
+            </form>
+          </div>
+        </section>
+
+        <section class="section  section--padding-b  partners-slider">
+          <div class="container">
+            <h2 class="section__title">Partners</h2>
+            <div class="swiper-container  partners-slider__container">
+              <div class="swiper-wrapper">
+                <div class="swiper-slide">
+                  <a href="#" title="Партнер" target="_blank" rel="nofollow noopener">
+                    <img src="img/chemical-group.png" alt="Партнер">
+                  </a>
+                </div>
+                <div class="swiper-slide">
+                  <a href="#" title="Партнер" target="_blank" rel="nofollow noopener">
+                    <img src="img/haccp-logo.svg" alt="Партнер">
+                  </a>
+                </div>
+                <div class="swiper-slide">
+                  <a href="#" title="Партнер" target="_blank" rel="nofollow noopener">
+                    <img src="img/leopard-logo.svg" alt="Партнер">
+                  </a>
+                </div>
+                <div class="swiper-slide">
+                  <a href="#" title="Партнер" target="_blank" rel="nofollow noopener">
+                    <img src="img/chemical-group.png" alt="Партнер">
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <section class="section  section--padding-b  partners-worldwide">
+          <div class="container">
+            <h2 class="section__title">We are Worldwide</h2>
+
+            <meta name="description" content="map created using amCharts pixel map generator" />
+            <div id="map" style="width: 100%" class="partners-worldwide__map"></div>
+          </div>
+        </section>
+
+      </main>
+
+    </div>
+
+    <div class="page__footer-wrapper">
+      @@include('blocks/page-footer/page-footer.html')
+    </div>
+
+  </div>
+
+  @@include('blocks/mmenu/mmenu.html')
+
+  @@include('blocks/callback-modal/callback-modal.html')
+
+  @@include('_include/page_bottom.html')
+
+</body>
+</html>

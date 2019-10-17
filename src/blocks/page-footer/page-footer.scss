@@ -1,4 +1,58 @@
 .page-footer {
+  padding-top: 40px;
+  padding-bottom: 20px;
+  border-top: 2px solid $main-color;
 
   $block-name:                &; // #{$block-name}__element
+
+  &__col-menu {
+    @include col(xs, 12, $grid-columns, 20px);
+    @include col(md, 6);
+    margin-bottom: 20px;
+  }
+
+  &__col-contacts {
+    @include col(xs, 12, $grid-columns, 20px);
+    @include col(md, 6);
+    @include col-offset(xl, 2);
+    @include col(xl, 4);
+    margin-bottom: 20px;
+  }
+
+  &__menu-list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: baseline;
+    align-content: flex-start;
+
+    li {
+      width: calc(50% - 10px);
+      margin-bottom: 20px;
+    }
+  }
+
+  &__content {
+
+    h2 {
+
+      @media (min-width: $screen-xl) {
+        margin-bottom: 40px;
+      }
+    }
+  }
+
+  &__contacts {
+
+  }
+
+  &__contacts-title {
+  }
+
+  &__links {
+
+    li {
+      margin-bottom: 20px;
+    }
+  }
 }

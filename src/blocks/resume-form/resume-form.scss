@@ -1,0 +1,55 @@
+.resume-form {
+
+  $block-name:                &; // #{$block-name}__element
+
+  &__col-fields {
+    @include col(xs, 12, $grid-columns, 20px);
+    @include col(md, 6);
+    @include col(xl, 3);
+
+    &--message {
+      margin-bottom: 20px;
+
+      @media (min-width: $screen-lg) {
+        margin-bottom: 0;
+      }
+
+      .field-text--message,
+      .field-text__input-wrap,
+      .field-text__input {
+        height: 100%;
+      }
+    }
+
+    &--inputs {
+
+      @media (min-width: $screen-xl) {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+      }
+    }
+  }
+
+  &__col-action {
+    @include col(xs, 12, $grid-columns, 20px);
+    @include col(md, 12);
+    @include col(xl, 6);
+
+    p {
+
+      @media (min-width: $screen-lg) {
+        margin-top: 20px;
+      }
+
+      @media (min-width: $screen-xl) {
+        margin-top: 0;
+      }
+    }
+  }
+
+  &__col-btns {
+    @include col(xs, 12, $grid-columns, 20px);
+    @include col(md, 6);
+  }
+}

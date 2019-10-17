@@ -1,0 +1,122 @@
+
+$gray-lightest:               hsl(0, 0%, 90%);
+$border-color:                hsl(0, 0%, 60%) !default;
+
+$line-height:                 1.375em !default;
+
+$field-padding-vertical:      0.3em !default;
+$field-padding-horizontal:    0.7em !default;
+
+$border-radius:               3px !default;
+
+.field-file {
+
+  $block-name:                &; // #{$block-name}__element
+
+  display: block;
+  margin-bottom: 20px;
+
+  &__name {
+    @include field-name;
+  }
+
+  &__input-wrap {
+    display: block;
+    position: relative;
+  }
+
+  &__input {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    opacity: 0;
+
+    &:active ~ .field-file__name-text,
+    &:focus ~ .field-file__name-text {
+      @include field-focus;
+      background-color: $btn-bg;
+      border-color: $btn-bg;
+      box-shadow: $shadow-btn--hover;
+      outline: 2px solid $btn-bg;
+
+      &:before {
+        background-color: $btn-bg;
+        border-color: $btn-bg;
+        box-shadow: $shadow-btn--hover;
+      }
+    }
+  }
+
+  &__name-text {
+    position: relative;
+    display: flex;
+    align-items: center;
+    width: 100%;
+    font-size: 20px;
+    color: $text-color;
+    background-color: $main-color;
+    border: 2px solid $main-color;
+    //border-radius: 0;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    cursor: pointer;
+
+    &:before {
+      content: attr(data-button-text);
+      display: block;
+      //padding: $field-padding-vertical  $field-padding-horizontal;
+      padding-top: $field-padding-vertical-mob;
+      padding-bottom: $field-padding-vertical-mob;
+      padding-left: 40px;
+      padding-right: 15px;
+      color: inherit;
+      background-color: $main-color;
+      border-right: 1px solid rgba(255, 255, 255, 0.3);
+      margin-right: 15px;
+      line-height: $line-height;
+      //border-top-left-radius: $border-radius;
+      //border-bottom-left-radius: $border-radius;
+
+      @media (min-width: $screen-md) {
+        padding-top: $field-padding-vertical-desc;
+        padding-bottom: $field-padding-vertical-desc;
+      }
+    }
+
+    &:hover,
+    &:focus {
+      color: $main-color;
+      background-color: $btn-bg;
+      border-color: $btn-bg;
+      box-shadow: $shadow-btn--hover;
+      outline: none;
+
+      &:before {
+        background-color: $btn-bg; // как у обычных кнопок
+        border-color: $btn-bg;
+      }
+    }
+
+    & > span {
+      display: block;
+      padding-top: $field-padding-vertical-mob;
+      padding-bottom: $field-padding-vertical-mob;
+      padding-right: 20px;
+      font-size: 16px;
+      //white-space: normal;
+      overflow: hidden;
+      text-overflow: ellipsis;
+
+      @media (min-width: $screen-md) {
+        padding-top: $field-padding-vertical-desc;
+        padding-bottom: $field-padding-vertical-desc;
+      }
+
+    }
+  }
+
+  &__help-text {
+    @include field-help-text;
+  }
+}

@@ -1,0 +1,100 @@
+.page-success {
+  position: relative;
+  background-color: $second-color;
+  border: 2px solid $main-color;
+
+  /* &::after {
+    position: absolute;
+    top: 50%;
+    left: 0;
+    right: 0;
+    z-index: -1;
+    display: block;
+    content: "";
+    width: 100%;
+    height: 2px;
+    background-color: $main-color;
+  } */
+
+  $block-name:                &; // #{$block-name}__element
+
+  &__wrapper {
+    padding-top: 100px;
+    padding-bottom: 100px;
+    background: linear-gradient(to top, $second-color, $second-color calc(50% - 1px), $main-color calc(50% - 1px), $main-color calc(50% + 1px), $second-color calc(50% + 1px), $second-color);
+  }
+
+  &__top,
+  &__bottom {
+    display: flex;
+    justify-content: center;
+  }
+
+  &__envelop {
+    display: inline-flex;
+    justify-content: center;
+    width: 200px;
+    background-color: $main-color;
+
+    @media (min-width: $screen-xxl) {
+      min-width: 250px;
+    }
+
+    img {
+      display: block;
+      width: 150px;
+      height: 62px;
+    }
+  }
+
+  p {
+    margin: 0;
+    padding: 40px 30px;
+    line-height: 1.5;
+    text-align: center;
+
+    @media (min-width: $screen-md) {
+      padding: 40px;
+    }
+
+    @media (min-width: $screen-xl) {
+      padding: 40px 60px;
+    }
+
+    @media (min-width: $screen-xxl) {
+      padding: 40px 120px;
+    }
+  }
+
+  .btn {
+    position: relative;
+    z-index: 1;
+    min-width: 200px;
+    transform: translateY(50%);
+    margin-top: -22px;
+
+    @media (min-width: $screen-md) {
+      margin-top: -27px;
+    }
+
+    @media (min-width: $screen-xxl) {
+      min-width: 250px;
+    }
+  }
+
+  &__404-text {
+
+    span {
+      display: block;
+      margin-top: 0;
+    }
+
+    .h1 {
+      color: $main-color;
+    }
+  }
+
+  &__404-logo {
+
+  }
+}

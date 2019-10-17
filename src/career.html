@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html class="no-js  page" lang="en" prefix="og: https://ogp.me/ns#">
+
+<head>
+  <meta charset="utf-8">
+  <title>Career</title>
+  @@include('_include/page_head.html')
+</head>
+
+<body>
+<noscript>You have javascript disabled. We apologize, but this makes it difficult to use this site. У вас отключен JavaScript. Приносим наши извинения, но это делает затруднительным использование данного сайта.</noscript>
+
+  <div id="content-wrapper" class="page__inner">
+
+    <div class="page__content">
+      @@include('blocks/page-header/page-header.html')
+
+      <main class="main-content  main-content--noindex" role="main">
+
+        @@include('blocks/callback-btn/callback-btn.html')
+
+        <div class="article  career">
+
+          <div class="main-content__header" style="background-image: url(./img/career-header-bg.jpg);">
+            <div class="container">
+
+              @@include('blocks/breadcrumbs/breadcrumbs.html')
+
+              <div class="row">
+                <div class="col-1-2">
+                  <h1 class="main-content__title">Career</h1>
+                  <p class="main-content__descr">Consequat veniam cupidatat sunt sint cupidatat ex nostrud reprehenderit et.</p>
+                </div>
+              </div>
+
+            </div>
+          </div>
+
+          <div class="main-content__content">
+            <div class="container">
+
+              <div class="columns-2">
+                  <p>Work in «Leopard Agri-Service» company is a successful career with possibility of professional growth and personal development.</p>
+                  <p>We are pleased to see among our employees both experienced specialists and perspective higher educational students, who are willing to develop in a stable and successful company.</p>
+                  <p>We honor the talent and creativity of each employee, motivating to implement personal ideas corresponding with the global goals of the COMPANY.</p>
+                  <p>You have the opportunity to become a part of our professional team & partners — together we will be able to be the leaders in the markets.</p>
+              </div>
+
+            </div>
+          </div>
+
+        </div>
+
+        <section class="section  section--padding-b  partnership  resume-form">
+          <div class="container">
+            <h2 class="section__title">Send Your Resume</h2>
+            <div class="row">
+              <div class="col-1-1-2  partnership__intro-col">
+                <div class="partnership__intro">
+                  <p>Send your resume and we will save it in our database to invite you for future vacancies</p>
+                  <p>Or send to the following email address: <a href="mailto:w.alkhatib@leopard-agri.com">w.alkhatib@leopard-agri.com</a></p>
+                </div>
+              </div>
+            </div>
+
+            <form class="partnership__form" id="resumeForm" action="/" method="post" enctype="multipart/form-data">
+
+              <div class="partnership__form-info">
+                <p class="h4">Fill the form, please</p>
+                <p class="partnership__form-note">Fields marked with * are required!</p>
+              </div>
+
+              <div class="row">
+
+                <div class="resume-form__col-fields  resume-form__col-fields--inputs">
+
+                  <label class="field-text">
+                    <span class="field-text__input-wrap">
+                      <input class="field-text__input  field-text__input--required" type="text" name="name" value="" placeholder="Your name">
+                      <span class="field-text__help-text  error"></span>
+                    </span>
+                  </label>
+
+                  <label class="field-text">
+                    <span class="field-text__input-wrap">
+                      <input class="field-text__input  field-text__input--required" type="tel" name="tel" value="" placeholder="Phone">
+                      <span class="field-text__help-text  error"></span>
+                    </span>
+                  </label>
+
+                  <label class="field-text">
+                    <span class="field-text__input-wrap">
+                      <input class="field-text__input  field-text__input--required" type="email" name="email" value="" placeholder="Email">
+                      <span class="field-text__help-text  error"></span>
+                    </span>
+                  </label>
+
+                </div>
+
+                <div class="resume-form__col-fields  resume-form__col-fields--message">
+
+                  <label class="field-text  field-text--message">
+                    <span class="field-text__input-wrap">
+                      <textarea class="field-text__input" name="message" value="" placeholder="Message"></textarea>
+                      <span class="field-text__help-text  error"></span>
+                    </span>
+                  </label>
+
+                </div>
+
+                <div class="resume-form__col-action">
+
+                  <p>Click to <strong>select</strong> the desired file, or just drag and drop the files you need here. Supported formats: doc, docx, rtf, txt, odt, pdf <strong>(20 Mb maximum)</strong></p>
+
+                  <div class="row">
+
+                    <div class="resume-form__col-btns">
+                      <div class="field-file">
+                        <label class="field-file__input-wrap">
+                          <input class="field-file__input" type="file" data-multiple-caption="File: {count}" name="">
+                          <div class="field-file__name-text" data-button-text="Select File"><span>0 selected</span></div>
+                        </label>
+                      </div>
+                    </div>
+
+                    <div class="resume-form__col-btns">
+                      <div class="field-actions">
+                        <input class="btn  partnership__submit" type="submit" name="submit" value="Submit">
+                      </div>
+                    </div>
+
+                  </div>
+
+                  <div class="field-checkbox">
+                    <label class="field-checkbox__name">
+                      <input id="agreement" class="field-checkbox__input" type="checkbox" checked>
+                      <span class="field-checkbox__name-text  partnership__agreement-text">I give consent to Leopard Agri-Aervice company that has published a vacancy for the processing of personal data provided by me in accordance with the Law of Ukraine <a href="https://zakon.rada.gov.ua/rada/show/2297-17" target="_blank" rel="nofollow noopener">"On Protection of Personal Data"</a></span>
+                    </label>
+                  </div>
+
+                </div>
+
+              </div>
+
+            </form>
+          </div>
+        </section>
+
+      </main>
+
+    </div>
+
+    <div class="page__footer-wrapper">
+      @@include('blocks/page-footer/page-footer.html')
+    </div>
+
+  </div>
+
+  @@include('blocks/mmenu/mmenu.html')
+
+  @@include('blocks/callback-modal/callback-modal.html')
+
+  @@include('_include/page_bottom.html')
+
+</body>
+</html>

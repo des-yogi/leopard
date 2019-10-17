@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html class="no-js  page" lang="en" prefix="og: https://ogp.me/ns#">
+
+<head>
+  <meta charset="utf-8">
+  <title>This page not found. Error 404</title>
+  @@include('_include/page_head.html')
+</head>
+
+<body>
+<noscript>You have javascript disabled. We apologize, but this makes it difficult to use this site. У вас отключен JavaScript. Приносим наши извинения, но это делает затруднительным использование данного сайта.</noscript>
+
+  <div id="content-wrapper" class="page__inner">
+
+    <div class="page__content">
+      @@include('blocks/page-header/page-header.html')
+
+      <main class="main-content  main-content--success" role="main">
+
+        @@include('blocks/callback-btn/callback-btn.html')
+
+          <div class="container  page-success__wrapper  page-404">
+
+            <div class="row">
+
+              <div class="col-404-text">
+
+                <div class="page-404__text">
+                  <span class="h1">Unfortunately</span>
+                  <span class="h2">something went wrong…</span>
+                  <a href="index.html" class="btn">To Home</a>
+                </div>
+
+              </div>
+
+              <div class="col-404-logo">
+
+                <div class="page-404__logo">
+                  <img src="img/404-logo.svg" alt="Error 404 pict">
+                </div>
+
+              </div>
+
+            </div>
+
+          </div>
+
+      </main>
+
+    </div>
+
+    <div class="page__footer-wrapper">
+      @@include('blocks/page-footer/page-footer.html')
+    </div>
+
+  </div>
+
+  @@include('blocks/mmenu/mmenu.html')
+
+  @@include('blocks/callback-modal/callback-modal.html')
+
+  @@include('_include/page_bottom.html')
+
+</body>
+</html>

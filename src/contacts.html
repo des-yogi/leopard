@@ -1,0 +1,288 @@
+<!DOCTYPE html>
+<html class="no-js  page" lang="en" prefix="og: https://ogp.me/ns#">
+
+<head>
+  <meta charset="utf-8">
+  <title>Contacts</title>
+  @@include('_include/page_head.html')
+
+  <!-- preload для немедленной предзагрузки, prefetch - загрузка для след. страницы
+  <link rel="preload" href="https://www.amcharts.com/lib/3/ammap.js" as="script">
+  <link rel="preload" href="https://www.amcharts.com/lib/3/maps/js/worldLow.js" as="script">
+-->
+
+  <script type="text/javascript" src="https://www.amcharts.com/lib/3/ammap.js"></script>
+  <script type="text/javascript" src="https://www.amcharts.com/lib/3/maps/js/worldLow.js"></script>
+  <script>
+    AmCharts.makeChart("map",{
+      "type": "map",
+      "pathToImages": "http://www.amcharts.com/lib/3/images/",
+      "addClassNames": true,
+      "fontSize": 15,
+      "color": "#FFFFFF",
+      "projection": "equirectangular",
+      "backgroundAlpha": 1,
+      "backgroundColor": "rgba(25,26,30,1)",
+      "dataProvider": {
+        "map": "worldLow",
+        "getAreasFromMap": true,
+        /*"images": [
+          {
+            "top": 40,
+            "left": 60,
+            "width": 80,
+            "height": 40,
+            "pixelMapperLogo": true,
+            "imageURL": "http://pixelmap.amcharts.com/static/img/logo.svg",
+            "url": "http://www.amcharts.com"
+          }
+        ],*/
+        "areas": [
+          {
+            "id": "UA",
+            "title": "Ukraine",
+            "color": "rgba(0,188,104,1)" // настройки цвета стран
+          },
+          {
+            "id": "PL",
+            "title": "Poland",
+            "color": "rgba(255,0,0,1)"
+          }
+        ]
+      },
+      "balloon": {
+        "horizontalPadding": 15,
+        "borderAlpha": 0,
+        "borderThickness": 1,
+        "verticalPadding": 15
+      },
+      "areasSettings": {
+        "color": "rgba(0,0,0,1)",
+        "outlineColor": "rgba(36,36,36,1)",
+        "rollOverOutlineColor": "rgba(36,36,36,1)",
+        "rollOverBrightness": 20,
+        "selectedBrightness": 20,
+        "selectable": true,
+        "unlistedAreasAlpha": 0,
+        "unlistedAreasOutlineAlpha": 0
+      },
+      "imagesSettings": {
+        "alpha": 1,
+        "color": "rgba(0,0,0,1)",
+        "outlineAlpha": 0,
+        "rollOverOutlineAlpha": 0,
+        "outlineColor": "rgba(36,36,36,1)",
+        "rollOverBrightness": 20,
+        "selectedBrightness": 20,
+        "selectable": true
+      },
+      "linesSettings": {
+        "color": "rgba(0,0,0,1)",
+        "selectable": true,
+        "rollOverBrightness": 20,
+        "selectedBrightness": 20
+      },
+      "zoomControl": {
+        "zoomControlEnabled": true,
+        "homeButtonEnabled": false,
+        "panControlEnabled": false,
+        "right": 0,
+        "bottom": 0,
+        "minZoomLevel": 0.5,
+        "gridHeight": 100,
+        "gridAlpha": 0.1,
+        "gridBackgroundAlpha": 0,
+        "gridColor": "#FFFFFF",
+        "draggerAlpha": 1,
+        "buttonCornerRadius": 2
+      }
+    });
+  </script>
+</head>
+
+<body>
+<noscript>You have javascript disabled. We apologize, but this makes it difficult to use this site. У вас отключен JavaScript. Приносим наши извинения, но это делает затруднительным использование данного сайта.</noscript>
+
+  <div id="content-wrapper" class="page__inner">
+
+    <div class="page__content">
+      @@include('blocks/page-header/page-header.html')
+
+      <main class="main-content  main-content--noindex" role="main">
+
+        @@include('blocks/callback-btn/callback-btn.html')
+
+        <article class="article  contacts">
+
+          <div class="main-content__header" style="background-image: url(./img/contacts-header-bg.jpg);">
+            <div class="container">
+
+              @@include('blocks/breadcrumbs/breadcrumbs.html')
+
+              <div class="row">
+                <div class="col-1-2">
+                  <h1 class="main-content__title">Contacts</h1>
+                  <p class="main-content__descr">Consequat veniam cupidatat sunt sint cupidatat ex nostrud reprehenderit et.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="main-content__content" itemscope itemtype="http://schema.org/Organization">
+            <meta itemprop="name" content="Leopard Agri-Service">
+            <div class="container">
+              <div class="row">
+
+                <div class="col-1-3  col-1-3--nohide">
+
+                  <div class="contacts__block">
+                    <dl class="contacts__list" itemprop="address" itemscope itemtype="http://schema.org/PostalAddress">
+
+                      <div class="contacts__list-inner">
+                        <dt>
+                          <h3>Office Address</h3>
+                        </dt>
+                        <dd>
+                          <span itemprop="streetAddress">6386 Spring St.</span> <span itemprop="addressLocality">Anchorage</span> &shy;<span  itemprop="addressRegion">Georgia,&nbsp;United States</span> &shy;<span itemprop="postalCode">12473</span>
+                        </dd>
+                      </div>
+
+                      <div class="contacts__list-inner">
+                        <dt>
+                          <h3>Email</h3>
+                        </dt>
+                        <dd itemprop="email">
+                          <a href="mailto:w.alkhatib@leopard-agri.com" class="contacts__link">w.alkhatib@leopard-agri.com</a>
+                        </dd>
+                      </div>
+
+                      <div class="contacts__list-inner">
+                        <dt>
+                          <h3>Phone</h3>
+                        </dt>
+                        <dd itemprop="telephone">
+                          <a href="tel:+380676766676" class="contacts__link">+38 067 67 666 76</a>
+                        </dd>
+                      </div>
+
+                    </dl>
+                  </div>
+
+                </div>
+
+                <div class="col-1-3  col-1-3--nohide">
+
+                  <div class="contacts__block">
+
+                    <h3>Instant Messengers</h3>
+
+                    <ul class="list-nostyled  contacts__list">
+
+                      <li class="contacts__item">
+                        <a class="contacts__link" href="">
+                          <svg width="26" height="26">
+                            <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="img/sprite-svg.svg#fb-messenger-icon"></use>
+                          </svg>
+                          <span>Facebook Messenger</span>
+                        </a>
+                      </li>
+
+                      <li class="contacts__item">
+                        <a class="contacts__link" href="">
+                          <svg width="26" height="22">
+                            <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="img/sprite-svg.svg#telegram-icon"></use>
+                          </svg>
+                          <span>Telegram</span>
+                        </a>
+                      </li>
+
+                      <li class="contacts__item">
+                        <a class="contacts__link" href="">
+                          <svg width="26" height="28">
+                            <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="img/sprite-svg.svg#viber-icon"></use>
+                          </svg>
+                          <span>Viber</span>
+                        </a>
+                      </li>
+
+                      <li class="contacts__item">
+                        <a class="contacts__link" href="">
+                          <svg width="26" height="26">
+                            <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="img/sprite-svg.svg#whatsapp-icon"></use>
+                          </svg>
+                          <span>Whatsapp</span>
+                        </a>
+                      </li>
+
+                    </ul>
+
+                  </div>
+
+                </div>
+
+                <div class="col-1-3  col-1-3--nohide">
+
+                  <div class="contacts__block">
+
+                    <h3>Social networks</h3>
+
+                    <ul class="list-nostyled  contacts__list">
+                      <link itemprop="url" href="https://leopard-agri.com/">
+
+                      <li class="contacts__item">
+                        <a class="contacts__link" href="https://facebook.com/your-company" itemprop="sameAs">
+                          <svg width="14" height="28">
+                            <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="img/sprite-svg.svg#facebook-icon"></use>
+                          </svg>
+                          <span>Facebook</span>
+                        </a>
+                      </li>
+
+                      <li class="contacts__item">
+                        <a class="contacts__link" href="https://www.instagram.com/your-company" itemprop="sameAs">
+                          <svg width="27" height="26">
+                            <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="img/sprite-svg.svg#instagram-icon"></use>
+                          </svg>
+                          <span>Instagram</span>
+                        </a>
+                      </li>
+
+                    </ul>
+
+                  </div>
+
+                </div>
+
+              </div>
+            </div>
+          </div>
+
+        </article>
+
+        <section class="section  section--padding-b  partners-worldwide">
+          <div class="container">
+            <h2 class="section__title">We are Worldwide</h2>
+
+            <meta name="description" content="map created using amCharts pixel map generator" />
+            <div id="map" style="width: 100%" class="partners-worldwide__map"></div>
+          </div>
+        </section>
+
+      </main>
+
+    </div>
+
+    <div class="page__footer-wrapper">
+      @@include('blocks/page-footer/page-footer.html')
+    </div>
+
+  </div>
+
+  @@include('blocks/mmenu/mmenu.html')
+
+  @@include('blocks/callback-modal/callback-modal.html')
+
+  @@include('_include/page_bottom.html')
+
+</body>
+</html>

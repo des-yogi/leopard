@@ -1,0 +1,75 @@
+.page-404 {
+  padding-bottom: 40px !important;
+  margin-bottom: 80px;
+  border-bottom: 2px solid $main-color;
+
+  background-image:
+    linear-gradient(to right, #191A1E, #191A1E 55%, rgba(255, 255,255, 0) 55% ),
+    linear-gradient(to bottom, #191A1E, #191A1E 75%, #00BC68 75%, #00BC68 85%, #104932 85%, #00BC68) !important;
+
+  @media (min-width: $screen-md) {
+    background-image:
+    linear-gradient(to right, #191A1E, #191A1E 69%, rgba(255, 255,255, 0) 69% ),
+    linear-gradient(to bottom, #191A1E, #191A1E 42%, #00BC68 42%, #00BC68 65%, #104932 65%, #00BC68) !important;
+  }
+
+  @media (min-width: $screen-xl) {
+    padding-bottom: 60px !important;
+    background-image:
+    linear-gradient(to right, #191A1E, #191A1E 61%, rgba(255, 255,255, 0) 61% ),
+    linear-gradient(to bottom, #191A1E, #191A1E 40%, #00BC68 40%, #00BC68 69%, #104932 69%, #00BC68) !important;
+  }
+
+  @media (min-width: $screen-xxl) {
+    margin-bottom: 140px;
+    background-image:
+    linear-gradient(to right, #191A1E, #191A1E 61%, rgba(255, 255,255, 0) 61% ),
+    linear-gradient(to bottom, #191A1E, #191A1E 42%, #00BC68 42%, #00BC68 65.5%, #104932 65.5%, #00BC68) !important;
+  }
+
+  $block-name:                &; // #{$block-name}__element
+
+  &__text {
+    margin-bottom: 40px;
+
+    @media (min-width: $screen-md) {
+      margin-bottom: 0;
+    }
+
+    span {
+      display: block;
+      margin-top: 0;
+    }
+
+    .h1 {
+      color: $main-color;
+    }
+
+    .btn {
+      width: 100%;
+      margin-top: 20px;
+
+      @media (min-width: $screen-md) {
+        width: 265px;
+        margin-top: 30px;
+      }
+
+      @media (min-width: $screen-xl) {
+        margin-top: 40px;
+      }
+
+      @media (min-width: $screen-xxl) {
+        width: 360px;
+      }
+    }
+  }
+
+  &__logo {
+
+    img {
+      display: block;
+      width: 100%;
+      box-shadow: 0px 25px 50px rgba(0, 0, 0, 0.35);
+    }
+  }
+}

@@ -1,4 +1,4 @@
-(function(){
+/*(function(){
   const langSwitcher = document.getElementById('lang-switcher');
   let togglerBtn = document.getElementById('lang-switcher-toggler');
   let page = document.documentElement;
@@ -9,4 +9,4 @@
       togglerBtn.innerHTML = lang;
     }();
   }
-}());
+}());*/

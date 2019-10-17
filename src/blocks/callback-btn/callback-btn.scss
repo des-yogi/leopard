@@ -1,0 +1,40 @@
+.callback-btn {
+  position: relative;
+
+  $block-name:                &; // #{$block-name}__element
+
+  &__item {
+    position: absolute;
+    top: 0;
+    right: 0;
+    box-sizing: border-box;
+    display: inline-block;
+    vertical-align: top;
+    padding: 10px 20px;
+    vertical-align: middle;
+    text-align: center;
+    font-family: inherit;
+    font-size: 1rem;
+    font-weight: 500;
+    white-space: nowrap;
+    line-height: $line-height;
+    color: $text-color;
+    background-color: $main-color;
+    border: none;
+    user-select: none;
+    cursor: pointer;
+
+    @media (min-width: $screen-md) {
+      padding: 12px 30px;
+      font-size: 20px;
+    }
+
+    &:hover,
+    &:focus {
+      color: $main-color;
+      background-color: $btn-bg;
+      box-shadow: $shadow-btn--hover;
+    }
+  }
+
+}

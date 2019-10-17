@@ -1,0 +1,53 @@
+.partnership {
+
+  $block-name:                &; // #{$block-name}__element
+
+  &__form-col {
+    @include col(xs, 12, $grid-columns, 20px);
+    @include col(md, 6);
+    @include col(lg, 4);
+    @include col(xl, 3);
+
+    @media (min-width: $screen-lg) {
+      margin-bottom: 20px;
+    }
+
+    @media (min-width: $screen-xl) {
+      margin-bottom: 0;
+    }
+
+    &--flex {
+      display: flex;
+      flex-direction: column;
+      margin-bottom: 20px;
+
+      @media (min-width: $screen-md) {
+        margin-bottom: 0;
+      }
+    }
+  }
+
+  &__intro-col {
+    margin-bottom: 20px;
+
+    @media (min-width: $screen-md) {
+      margin-bottom: 40px;
+    }
+  }
+
+  &__form {
+
+  }
+
+  &__form-info {
+    margin-bottom: 20px;
+  }
+
+  &__form-note {
+    font-size: 0.85em;
+  }
+
+  &__agreement-text {
+    font-size: 14px;
+  }
+}

@@ -14,6 +14,56 @@
         <img src="img/leopard-agri-service-logo.svg" alt="Leopard Agri-Service logo" width="142" height="42">
       </a>
 
+      <div class="page-header__burger-wrapper">
+        <a href="#offcanvas" class="burger"><span></span></a>
+        <span class="burger__title">Menu</span>
+      </div>
+
+      <div class="page-header__service-menu">
+
+        @@include('../../blocks/socials/socials.html')
+
+        <div class="page-header__dropdowns">
+          <div class="dropdown  phone-dropdown">
+            <a href="tel:+380676766676" class="phone-dropdown__link  phone-dropdown__link--main">+380 67 67 666 76</a>
+            <button type="button" class="dropdown-toggle dropdown-toggle-split phone-dropdown__toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+              <span class="visually-hidden">Toggle Dropdown</span>
+            </button>
+            <div class="dropdown-menu">
+              <ul class="list-nostyled">
+                <li>
+                  <a href="tel:+380676766676" class="phone-dropdown__link">+380 67 67 666 76</a>
+                </li>
+                <li>
+                  <a href="tel:+380676766676" class="phone-dropdown__link">+380 67 67 666 76</a>
+                </li>
+                <li>
+                  <a href="tel:+380676766676" class="phone-dropdown__link">+380 67 67 666 76</a>
+                </li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="lang-switcher  dropdown" id="lang-switcher">
+            <button class="dropdown-toggle" type="button" id="lang-switcher-toggler" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+              <svg width="26" height="26">
+                <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="img/sprite-svg.svg#lang-switcher-icon"></use>
+              </svg>
+            </button>
+            <div class="dropdown-menu" aria-labelledby="lang-switcher">
+              <ul class="list-nostyled">
+                <li>
+                  <a class="dropdown-item" href="#">UA</a>
+                </li>
+                <li>
+                  <a class="dropdown-item" href="#">RU</a>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+
     </div>
   </div>
 </header>
