@@ -42,6 +42,7 @@
     border-color: $btn-bg;
     box-shadow: $shadow-btn--hover;
     background-image: svg-load('../blocks/btn/bg-img/arrow-right.svg', fill=$main-color);
+    outline: none;
   }
 
   &:active,

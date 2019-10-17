@@ -256,6 +256,13 @@ a {
   @include col(md, 6);
 }
 
+.col-1-1-2 {
+  @include col(xs, 12, $grid-columns, 20px);
+  @include col(md, 12);
+  @include col(lg, 8);
+  @include col(xxl, 6);
+}
+
 .col-1-2-1 {
   @include col(xs, 12, $grid-columns, 20px);
   @include col(md, 6);
@@ -379,6 +386,34 @@ a {
   @include col(xl, 8);
 }
 
+.col-success {
+  @include col(xs, 12, $grid-columns, 20px);
+  @include col-offset(md, 2);
+  @include col(md, 8);
+  @include col-offset(xl, 3);
+  @include col(xl, 6);
+}
+
+.col-404-text {
+  @include col(xs, 12, $grid-columns, 20px);
+  @include col(md, 6);
+  @include col(xl, 5);
+  @include col(xxl, 4);
+}
+
+.col-404-logo {
+  @include col(xs, 12, $grid-columns, 20px);
+  @include col(md, 6);
+}
+
+.columns-2 {
+
+  @media (min-width: $screen-md) {
+    column-count: 2;
+    column-gap: 60px;
+  }
+}
+
 .main-content {
 
   &__header {
@@ -411,6 +446,10 @@ a {
     @media (min-width: $screen-xl) {
       padding-bottom: 60px;
       margin-top: -90px;
+    }
+
+    &--success {
+
     }
   }
 
