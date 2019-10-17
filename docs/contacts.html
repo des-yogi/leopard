@@ -251,8 +251,12 @@
                   </li>
                 </ol>
               </nav>
-              <h1 class="main-content__title">Contacts</h1>
-              <p class="main-content__descr">Consequat veniam cupidatat sunt sint cupidatat ex nostrud reprehenderit et.</p>
+              <div class="row">
+                <div class="col-1-2">
+                  <h1 class="main-content__title">Contacts</h1>
+                  <p class="main-content__descr">Consequat veniam cupidatat sunt sint cupidatat ex nostrud reprehenderit et.</p>
+                </div>
+              </div>
             </div>
           </div>
           <div class="main-content__content" itemscope itemtype="http://schema.org/Organization">
@@ -260,35 +264,37 @@
             <div class="container">
               <div class="row">
                 <div class="col-1-3  col-1-3--nohide">
-                  <dl class="contacts__list" itemprop="address" itemscope itemtype="http://schema.org/PostalAddress">
-                    <div class="contacts__list-inner">
-                      <dt>
-                        <h3>Office Address</h3>
-                      </dt>
-                      <dd>
-                        <span itemprop="streetAddress">6386 Spring St.</span> <span itemprop="addressLocality">Anchorage</span> &shy;<span itemprop="addressRegion">Georgia,&nbsp;United States</span> &shy;<span itemprop="postalCode">12473</span>
-                      </dd>
-                    </div>
-                    <div class="contacts__list-inner">
-                      <dt>
-                        <h3>Email</h3>
-                      </dt>
-                      <dd itemprop="email">
-                        <a href="mailto:w.alkhatib@leopard-agri.com" class="contacts__link">w.alkhatib@leopard-agri.com</a>
-                      </dd>
-                    </div>
-                    <div class="contacts__list-inner">
-                      <dt>
-                        <h3>Phone</h3>
-                      </dt>
-                      <dd itemprop="telephone">
-                        <a href="tel:+380676766676" class="contacts__link">+38 067 67 666 76</a>
-                      </dd>
-                    </div>
-                  </dl>
+                  <div class="contacts__block">
+                    <dl class="contacts__list" itemprop="address" itemscope itemtype="http://schema.org/PostalAddress">
+                      <div class="contacts__list-inner">
+                        <dt>
+                          <h3>Office Address</h3>
+                        </dt>
+                        <dd>
+                          <span itemprop="streetAddress">6386 Spring St.</span> <span itemprop="addressLocality">Anchorage</span> &shy;<span itemprop="addressRegion">Georgia,&nbsp;United States</span> &shy;<span itemprop="postalCode">12473</span>
+                        </dd>
+                      </div>
+                      <div class="contacts__list-inner">
+                        <dt>
+                          <h3>Email</h3>
+                        </dt>
+                        <dd itemprop="email">
+                          <a href="mailto:w.alkhatib@leopard-agri.com" class="contacts__link">w.alkhatib@leopard-agri.com</a>
+                        </dd>
+                      </div>
+                      <div class="contacts__list-inner">
+                        <dt>
+                          <h3>Phone</h3>
+                        </dt>
+                        <dd itemprop="telephone">
+                          <a href="tel:+380676766676" class="contacts__link">+38 067 67 666 76</a>
+                        </dd>
+                      </div>
+                    </dl>
+                  </div>
                 </div>
                 <div class="col-1-3  col-1-3--nohide">
-                  <div>
+                  <div class="contacts__block">
                     <h3>Instant Messengers</h3>
                     <ul class="list-nostyled  contacts__list">
                       <li class="contacts__item">
@@ -327,11 +333,12 @@
                   </div>
                 </div>
                 <div class="col-1-3  col-1-3--nohide">
-                  <div>
+                  <div class="contacts__block">
                     <h3>Social networks</h3>
                     <ul class="list-nostyled  contacts__list">
+                      <link itemprop="url" href="https://leopard-agri.com/">
                       <li class="contacts__item">
-                        <a class="contacts__link" href>
+                        <a class="contacts__link" href="https://facebook.com/your-company" itemprop="sameAs">
                           <svg width="14" height="28">
                             <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="img/sprite-svg.svg#facebook-icon"/>
                           </svg>
@@ -339,7 +346,7 @@
                         </a>
                       </li>
                       <li class="contacts__item">
-                        <a class="contacts__link" href>
+                        <a class="contacts__link" href="https://www.instagram.com/your-company" itemprop="sameAs">
                           <svg width="27" height="26">
                             <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="img/sprite-svg.svg#instagram-icon"/>
                           </svg>
@@ -353,74 +360,6 @@
             </div>
           </div>
         </article>
-        <section class="section  section--padding-b  partnership">
-          <div class="container">
-            <h2 class="section__title">Partnership</h2>
-            <div class="row">
-              <div class="col-1-2  partnership__intro-col">
-                <div class="partnership__intro">
-                  <h4>Let's start cooperation today.</h4>
-                  <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Amet cras urna, malesuada euismod. Vulputate non suspendisse consequat volutpat, tellus. Nisi ac sit lacus, mauris.</p>
-                </div>
-              </div>
-            </div>
-            <form class="partnership__form" id="partnershipForm" action="/" method="post">
-              <div class="partnership__form-info">
-                <h4>Fill the form, please</h4>
-                <p class="partnership__form-note">Fields marked with * are required!</p>
-              </div>
-              <div class="row">
-                <div class="partnership__form-col">
-                  <label class="field-text">
-                    <span class="field-text__input-wrap">
-                      <input class="field-text__input  field-text__input--required" type="text" name="name" value placeholder="Your name">
-                      <span class="field-text__help-text  error"></span>
-                    </span>
-                  </label>
-                  <label class="field-text">
-                    <span class="field-text__input-wrap">
-                      <input class="field-text__input" type="text" name="company" value placeholder="Company Name">
-                      <span class="field-text__help-text  error"></span>
-                    </span>
-                  </label>
-                </div>
-                <div class="partnership__form-col">
-                  <label class="field-text">
-                    <span class="field-text__input-wrap">
-                      <input class="field-text__input  field-text__input--required" type="tel" name="tel" value placeholder="Phone">
-                      <span class="field-text__help-text  error"></span>
-                    </span>
-                  </label>
-                  <label class="field-text">
-                    <span class="field-text__input-wrap">
-                      <input class="field-text__input  field-text__input--required" type="email" name="email" value placeholder="Email">
-                      <span class="field-text__help-text  error"></span>
-                    </span>
-                  </label>
-                </div>
-                <div class="partnership__form-col  partnership__form-col--flex">
-                  <label class="field-text  field-text--nomargin">
-                    <span class="field-text__input-wrap">
-                      <textarea class="field-text__input" name="message" value placeholder="Message"></textarea>
-                      <span class="field-text__help-text  error"></span>
-                    </span>
-                  </label>
-                </div>
-                <div class="partnership__form-col">
-                  <div class="field-actions">
-                    <input class="btn  partnership__submit" type="submit" name="submit" value="Submit">
-                  </div>
-                  <div class="field-checkbox">
-                    <label class="field-checkbox__name">
-                      <input id="agreement" class="field-checkbox__input" type="checkbox" checked>
-                      <span class="field-checkbox__name-text  partnership__agreement-text">I consent to the processing of personal data</span>
-                    </label>
-                  </div>
-                </div>
-              </div>
-            </form>
-          </div>
-        </section>
         <section class="section  section--padding-b  partners-worldwide">
           <div class="container">
             <h2 class="section__title">We are Worldwide</h2>
@@ -509,9 +448,9 @@
   <nav id="offcanvas" class="mmenu">
      <ul>
         <li class="active"><a href="index.html">Home</a></li>
-        <li><a href="agrochemicals.html">Agrochemicals</a></li>
-        <li><a href="import-export.html">Import & Export</a></li>
-        <li><a href="services.html">Services</a></li>
+        <li><a href="services.html">Agrochemicals</a></li>
+        <li><a href="services.html">Import & Export</a></li>
+        <li><a href="news.html">Services</a></li>
         <li><a href="about.html">About Us</a></li>
         <li><a href="news.html">News</a></li>
         <li><a href="career.html">Career</a></li>

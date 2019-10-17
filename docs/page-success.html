@@ -1,8 +1,8 @@
 <!DOCTYPE html>
-<html class="no-js  page" lang="ru" prefix="og: https://ogp.me/ns#">
+<html class="no-js  page" lang="en" prefix="og: https://ogp.me/ns#">
 <head>
   <meta charset="utf-8">
-  <title>Leopard Agri-Service</title>
+  <title>Successful Submission Confirmation</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
   <meta name="MobileOptimized" content="320">
   <meta name="format-detection" content="telephone=no">
@@ -40,7 +40,7 @@
 <meta name="msapplication-config" content="/img/browserconfig.xml">
 <meta name="theme-color" content="#ffffff"></head>
 <body>
-<noscript>У вас отключен JavaScript. Приносим наши извинения, но это делает затруднительным использование данного сайта.</noscript>
+<noscript>You have javascript disabled. We apologize, but this makes it difficult to use this site. У вас отключен JavaScript. Приносим наши извинения, но это делает затруднительным использование данного сайта.</noscript>
   <div id="content-wrapper" class="page__inner">
     <div class="page__content">
       <header class="page-header" role="banner">
@@ -128,7 +128,30 @@
           </div>
         </div>
       </header>
-      <main class="main-content" role="main">
+      <main class="main-content  main-content--success" role="main">
+        <div class="container">
+          <div class="callback-btn">
+            <button class="callback-btn__item" type="button" data-toggle="modal" data-target="#callback">Call me back</button>
+          </div>
+        </div>
+          <div class="container  page-success__wrapper">
+            <div class="row">
+              <div class="col-success">
+                <div class="page-success">
+                  <div class="page-success__top">
+                    <div class="page-success__envelop">
+                      <img src="img/envelop.svg" alt="Envelop" width="150" height="62">
+                    </div>
+                  </div>
+                  <p class="h3">Your message has been delivered successfully!</p>
+                  <div class="page-success__bottom">
+                    <button type="button" onclick="goBack()" class="btn  btn--inverted">Go back</button>
+                  </div>
+                  <script>function goBack() { window.history.back(); }</script>
+                </div>
+              </div>
+            </div>
+          </div>
       </main>
     </div>
     <div class="page__footer-wrapper">
@@ -210,15 +233,34 @@
   <nav id="offcanvas" class="mmenu">
      <ul>
         <li class="active"><a href="index.html">Home</a></li>
-        <li><a href="agrochemicals.html">Agrochemicals</a></li>
-        <li><a href="import-export.html">Import & Export</a></li>
-        <li><a href="services.html">Services</a></li>
+        <li><a href="services.html">Agrochemicals</a></li>
+        <li><a href="services.html">Import & Export</a></li>
+        <li><a href="news.html">Services</a></li>
         <li><a href="about.html">About Us</a></li>
         <li><a href="news.html">News</a></li>
         <li><a href="career.html">Career</a></li>
         <li><a href="contacts.html">Contacts</a></li>
      </ul>
   </nav>
+  <div class="modal fade" id="callback" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="exampleModalLongTitle">Modal title</h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+          Содержание модалки
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+          <button type="button" class="btn btn-primary">Save changes</button>
+        </div>
+      </div>
+    </div>
+  </div>
   <script src="js/script.min.js"></script>
 </body>
 </html>
