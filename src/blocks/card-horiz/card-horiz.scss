@@ -7,6 +7,7 @@
   border-right: 2px solid $main-color;
   border-bottom: 2px solid $main-color;
   border-left: 2px solid #fff;
+  background-color: $second-color;
 
   @media (min-width: $screen-xl) {
     flex-direction: row;
