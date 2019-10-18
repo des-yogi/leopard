@@ -5,9 +5,19 @@
   padding-bottom: 0;
   border-top: 2px solid $main-color;
   border-bottom: 2px solid $main-color;
+  background-color: $second-color;
 
   @media (min-width: $screen-md) {
-    margin-bottom: 175px;
+    //margin-bottom: 175px;
+    margin-bottom: 130px; //80
+  }
+
+  @media (min-width: $screen-xl) {
+    margin-bottom: 150px;//100
+  }
+
+  @media (min-width: $screen-xxl) {
+    margin-bottom: 200px;//140
   }
 
   $block-name:                &; // #{$block-name}__element

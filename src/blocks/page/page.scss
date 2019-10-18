@@ -50,7 +50,8 @@ body {
   // Типографика проекта — в блоке typo
   display: flex;           // Исправляем баг в IE для min-height and flexbox (flex-direction:column)
   flex-direction: column;  // и прижимаем footer в IE 10-11
-  background-color: $body-bg;
+  //background-color: $body-bg;
+  background: linear-gradient(to bottom, $second-color, $second-color 15%, $body-bg 30%, $body-bg);
   margin: 0;
   min-height: 100%;
 }
@@ -360,17 +361,6 @@ a {
     }
   }
 
-  /* &:nth-child(n+4) {
-
-    @media (min-width: $screen-lg) {
-      display: none;
-    }
-
-    @media (min-width: $screen-xl) {
-      display: block;
-    }
-  } */
-
   &--btn {
     @include col-offset(md, 6);
     @include col-offset(lg, 8);
@@ -442,14 +432,25 @@ a {
   &__content {
     padding-bottom: 40px;
     margin-top: -60px; // подъем на полоаину высоты нижнего паддинга
+    margin-bottom: 80px;
+    border-bottom: 2px solid $main-color;
+    background: linear-gradient(to top, $second-color, $second-color 85%, rgba(255, 255, 255, 0) );
 
     @media (min-width: $screen-xl) {
       padding-bottom: 60px;
       margin-top: -90px;
     }
 
+    @media (min-width: $screen-xxl) {
+      margin-bottom: 140px;
+    }
+
     &--success {
 
+    }
+
+    &--wo-pad-bottom {
+      padding-bottom: 0 !important;
     }
   }
 
@@ -512,16 +513,10 @@ a {
       max-width: 790px;
     }
   }
+
+  &--wo-border {
+    border-bottom: none;
+  }
 }
-
-/* &__element {
-  @include col(); // малые ширины — 12 из 12, промежутки по умолчанию
-  @include col(sm, 6, $grid-columns, 10px);  // SM (480 по умолчанию) — 6 из 12, промежутки 10px
-  @include col(md, 4, $grid-columns, 12px);  // MD (768 по умолчанию) — 4 из 12, промежутки 12px
-  @include col(lg, 3, $grid-columns, 16px);  // LG (992 по умолчанию) — 3 из 12, промежутки 16px
-  @include col(xl, 2, $grid-columns, 20px);  // XL (1200 по умолчанию) — 2 из 12, промежутки 20px
-  @include col(xxl, 1, $grid-columns, 26px); // XXL (1800 по умолчанию) — 1 из 12, промежутки 26px
-} */
-
 
 // background: svg-load('../blocks/phones-modal/bg-img/phone.svg', fill=$main-color, stroke=rgba(255, 255, 255, 0));

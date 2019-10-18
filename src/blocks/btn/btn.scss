@@ -65,7 +65,7 @@
 
   &--inverted {
     color: $main-color;
-    background-color: $btn-bg;
+    background-color: $second-color;
     background-image: svg-load('../blocks/btn/bg-img/arrow-right.svg', fill=$main-color);
     border-color: $main-color;
 

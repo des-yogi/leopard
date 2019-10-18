@@ -32,8 +32,8 @@ $text-color:                  #fff;
 $title-color:                 #fff;
 $text-muted:                  $gray-lightest;
 
-$body-bg:                     $second-color;
-$btn-bg:                      #161717;
+$body-bg:                     #161717;
+$btn-bg:                      $body-bg;
 $gradient:                    linear-gradient(99deg, $second-color -7.55%, $main-color 56.27%);
 
 $link-color:                  currentColor;

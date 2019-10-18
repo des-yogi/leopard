@@ -1,5 +1,7 @@
 .page-header {
+  background-color: $second-color;
   border-bottom: 2px solid $main-color;
+
 
   $block-name:                &; // #{$block-name}__element
 
