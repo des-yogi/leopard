@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html class="no-js  page" lang="[[++cultureKey]]" prefix="og: https://ogp.me/ns#">
 <head>
-  <base href="[[++site_url]]">
+  <base href="[[++site_url]]"/>
   <meta charset="utf-8">
   {block 'title'}
     <title>[[*longtitle:default=`[[*pagetitle]]`]] | [[++site_name]]</title>
@@ -53,12 +53,12 @@
     <header class="page-header" role="banner">
       <div class="container">
         <div class="page-header__inner">
-          <a [[*template:ne=`1`:then=`href="/"`:else=`style="pointer-events:none;"`]] class="logo" title="[[++site_name]]">
+          <a [[*template:ne=`1`:then=`href="[[++site_url]]"`:else=`style="pointer-events:none;"`]] class="logo" title="[[++site_name]]">
             <img src="assets/img/leopard-agri-service-logo.svg" alt="[[++site_name]] logo" width="142" height="42">
           </a>
           <div class="page-header__burger-wrapper">
             <a href="#offcanvas" class="burger" aria-labelledby="burger-menu"><span></span></a>
-            <span id="burger-menu" class="burger__title">[[$langs? &uk=`Відкрити меню` &en=`Menu open`]]</span>
+            <span id="burger-menu" class="burger__title">[[$langs? &uk=`Меню` &en=`Menu`]]</span>
           </div>
           <div class="page-header__service-menu">
 
@@ -122,14 +122,17 @@
           <div class="row">
             <div class="page-footer__col-menu">
               <div class="page-footer__menu" role="navigation">
-                <ul class="list-nostyled  page-footer__menu-list">
-                  <li><a href="about.html">About Us</a></li>
-                  <li><a href="agrochemicals.html">Agrochemicals</a></li>
-                  <li><a href="partners.html">Partners</a></li>
-                  <li><a href="import-export.html">Import & Export</a></li>
-                  <li><a href="news.html">News</a></li>
-                  <li><a href="services.html">Services</a></li>
-                </ul>
+                [[pdoMenu?
+                &parents=`0`
+                &resources=`
+                  -[[BabelTranslation:default=`1`? &resourceId=`1` &contextKey=`[[*context_key]]`]],
+                  -[[BabelTranslation:default=`11`? &resourceId=`11` &contextKey=`[[*context_key]]`]]
+                `
+                &level=`1`
+                &tplOuter=`@INLINE <ul class="list-nostyled  page-footer__menu-list">[[+wrapper]]</ul>`
+                &tpl=`@INLINE <li [[+classes]]><a href="[[+link]]" [[+attributes]]>[[+menutitle]]</a>[[+wrapper]]</li>`
+                &tplHere=`@INLINE <li class="active"><a style="pointer-events:none; color:rgb(0, 188, 104);">[[+menutitle]]</a>[[+wrapper]]</li>`
+                ]]
               </div>
             </div>
             <div class="page-footer__col-contacts">
@@ -167,16 +170,13 @@
 
 <!-- The off-canvas menu -->
 <nav id="offcanvas" class="mmenu">
-  <ul>
-    <li class="active"><a href="index.html">Home</a></li>
-    <li><a href="services.html">Agrochemicals</a></li>
-    <li><a href="services.html">Import & Export</a></li>
-    <li><a href="news.html">Services</a></li>
-    <li><a href="about.html">About Us</a></li>
-    <li><a href="news.html">News</a></li>
-    <li><a href="career.html">Career</a></li>
-    <li><a href="contacts.html">Contacts</a></li>
-  </ul>
+  [[pdoMenu?
+  &parents=`0`
+  &level=`1`
+  &tplOuter=`@INLINE <ul>[[+wrapper]]</ul>`
+  &tpl=`@INLINE <li [[+classes]]><a href="[[+link]]" [[+attributes]]>[[+menutitle]]</a>[[+wrapper]]</li>`
+  &tplHere=`@INLINE <li class="active"><a [[+attributes]]>[[+menutitle]]</a>[[+wrapper]]</li>`
+  ]]
 </nav>
 
 <div class="modal fade" id="callback" tabindex="-1" role="dialog" aria-labelledby="callbackModal" aria-hidden="true">
@@ -192,18 +192,18 @@
         <form id="callbackform" action="/" method="post">
           <label class="field-text">
             <span class="field-text__input-wrap">
-              <input class="field-text__input  field-text__input--required" type="text" name="name" value="" placeholder="Your name">
+              <input class="field-text__input  field-text__input--required" type="text" name="name" value="" placeholder="[[$langs? &uk=`Ваше ім'я` &en=`Your name`]]">
               <span class="field-text__help-text  error"></span>
             </span>
           </label>
           <label class="field-text">
             <span class="field-text__input-wrap">
-              <input class="field-text__input  field-text__input--required" type="tel" name="tel" value="" placeholder="Phone">
+              <input class="field-text__input  field-text__input--required" type="tel" name="tel" value="" placeholder="[[$langs? &uk=`Телефон` &en=`Phone`]]">
               <span class="field-text__help-text  error"></span>
             </span>
           </label>
           <div class="field-actions">
-            <input class="btn" type="submit" name="submit" value="Submit">
+            <input class="btn" type="submit" name="submit" value="[[$langs? &uk=`Надіслати` &en=`Submit`]]">
           </div>
         </form>
       </div>

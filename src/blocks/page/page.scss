@@ -452,6 +452,11 @@ a {
     &--wo-pad-bottom {
       padding-bottom: 0 !important;
     }
+
+    &--article {
+      margin-bottom: 0 !important;
+      border-bottom: none;
+    }
   }
 
   &__title {

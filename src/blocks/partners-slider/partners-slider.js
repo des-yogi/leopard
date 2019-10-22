@@ -3,7 +3,9 @@ document.addEventListener('DOMContentLoaded', function() {
   var partnersSlider = new Swiper ('.partners-slider__container', {
     initialSlide: 1,
     slidesPerView: 2,
-    spaceBetween: 0,
+    autoplay: {
+      delay: 3000,
+    },
     loop: true,
     //centeredSlides: true,
     breakpoints: {

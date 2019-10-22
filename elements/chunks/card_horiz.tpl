@@ -1,6 +1,6 @@
-<div class="col-1-3">
-  <div class="card-vert">
-    <div class="embed-responsive  embed-responsive--4-3  card-vert__img">
+<div class="col-1-2-1">
+  <div class="card-horiz">
+    <div class="embed-responsive  embed-responsive--4-3  card-horiz__img">
       <picture>
         <source data-srcset="[[+tv.image:pthumb=`w=506&h=380&zc=C&f=webp&q=75`]]" media="(min-width: 1280px)" type="image/webp">
         <source data-srcset="[[+tv.image:pthumb=`w=506&h=380&zc=C&f=jpeg&q=75`]]" media="(min-width: 1280px)">
@@ -18,10 +18,11 @@
         <img class="b-lazy" data-src="[[+tv.image:pthumb=`w=480&h=360&zc=C&f=jpeg&q=75`]]" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="[[+longtitle:default=`[[+pagetitle]]`]]" width="480" height="360">
       </picture>
     </div>
-    <div class="card-vert__text">
-      <h3 class="card-vert__title">[[+longtitle:default=`[[+pagetitle]]`]]</h3>
+    <div class="card-horiz__text">
+      <span class="publishedon">[[$langs? &uk=`[[+publishedon:date=`%d.%m.%Y`]]` &en=`[[+publishedon:date=`%B %d, %Y`]]`]]</span>
+      <h3 class="card-horiz__title">[[+longtitle:default=`[[+pagetitle]]`]]</h3>
       <p>[[+introtext]]</p>
-      <div class="card-vert__btn-wrapper">
+      <div class="card-horiz__btn-wrapper">
         <a href="[[+uri]]" class="btn  btn--inverted">[[$langs? &uk=`Детальніше` &en=`Read more`]]</a>
       </div>
     </div>
