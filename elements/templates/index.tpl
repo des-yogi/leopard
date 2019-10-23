@@ -2,22 +2,18 @@
 
 {block 'main'}
   <main class="main-content" role="main">
-
     <div class="container">
       {include 'file:chunks/callback_btn.tpl'}
     </div>
-
     <section class="b-lazy  index-slider  container" data-src="assets/img/index-slide-bg.jpg">
       <div class="swiper-container index-slider__container">
         <div class="swiper-wrapper">
-
           [[!getImageList?
           &tvname=`main_slider`
           &tpl=`main_slider_tpl`
           &docid=`[[*id]]`
           &limit=`9`
           ]]
-
         </div>
         <div class="index-slider__navigation">
           <div class="swiper-button-prev"></div>
@@ -93,7 +89,6 @@
     </section>
 
     {include 'file:chunks/partners_slider.tpl'}
-
     {include 'file:chunks/partnership.tpl'}
 
     <section class="section  last-news">

@@ -12,7 +12,22 @@
         </div>
       </div>
     </div>
-    <form class="partnership__form" id="partnershipForm" action="/" method="post">
+    [[!FormIt?
+    &preHooks=`checkSpamTime`
+    &hooks=`email,redirect`
+    &redirectTo=`[[BabelTranslation:default=`14`? &resourceId=`14` &contextKey=`[[*context_key]]`]]`
+    &redirectParams=`{ "success":"1" }`
+    &emailFrom=`postman@leopard-agri.com`
+    &emailTpl=`@FILE chunks/emails/email_tpl.tpl`
+    &emailTo=`[[++main_email]]`
+    &emailBCC=`des.yogi@ukr.net`
+    &emailSubject=`[[$langs? &uk=`Пропозиція партнерства з сайту` &en=`Partnership offer from the site`]] [[++site_name]]`
+    &validate=`name:required,tel:required,email:email:required,activity:blank`
+    &validationErrorMessage=`[[$langs? &uk=`У формі містяться помилки!` &en=`The form contains errors!`]]`
+    &successMessage=`[[$langs? &uk=`Повідомлення успішно відправлено!` &en=`Message sent successfully!`]]`
+    &submitVar=`partnershipForm`
+    ]]
+    <form class="partnership__form" id="partnershipForm" action="[[~[[*id]]]]#partnershipFormStart" method="post">
       <div class="partnership__form-info">
         <p class="h4">[[$langs? &uk=`Заповніть, будь ласка, форму` &en=`Fill the form, please`]]</p>
         <p class="partnership__form-note">[[$langs? &uk=`Поля, позначені <span style="color:#00bc68">*</span>,
@@ -22,47 +37,48 @@
         <div class="partnership__form-col">
           <label class="field-text">
             <span class="field-text__input-wrap">
-              <input class="field-text__input  field-text__input--required" type="text" name="name" value=""
+              <input id="partnershipFormStart" class="field-text__input  field-text__input--required" type="text" name="name" value="[[!+fi.name]]"
                      placeholder="[[$langs? &uk=`Ваше ім'я` &en=`Your name`]]">
-              <span class="field-text__help-text  error"></span>
+              <span class="field-text__help-text  error">[[!+fi.error.name]]</span>
             </span>
           </label>
           <label class="field-text">
             <span class="field-text__input-wrap">
-              <input class="field-text__input" type="text" name="company" value=""
+              <input class="visually-hidden" type="text" name="activity" value="">
+              <input class="field-text__input" type="text" name="company" value="[[!+fi.company]]"
                      placeholder="[[$langs? &uk=`Назва компанії` &en=`Company Name`]]">
-              <span class="field-text__help-text  error"></span>
+              <span class="field-text__help-text  error">[[!+fi.error.company]]</span>
             </span>
           </label>
         </div>
         <div class="partnership__form-col">
           <label class="field-text">
             <span class="field-text__input-wrap">
-              <input class="field-text__input  field-text__input--required" type="tel" name="tel" value=""
+              <input class="field-text__input  field-text__input--required" type="tel" name="tel" value="[[!+fi.tel]]"
                      placeholder="[[$langs? &uk=`Телефон` &en=`Phone`]]">
-              <span class="field-text__help-text  error"></span>
+              <span class="field-text__help-text  error">[[!+fi.error.tel]]</span>
             </span>
           </label>
           <label class="field-text">
             <span class="field-text__input-wrap">
-              <input class="field-text__input  field-text__input--required" type="email" name="email" value=""
+              <input class="field-text__input  field-text__input--required" type="email" name="email" value="[[!+fi.email]]"
                      placeholder="Email">
-              <span class="field-text__help-text  error"></span>
+              <span class="field-text__help-text  error">[[!+fi.error.email]]</span>
             </span>
           </label>
         </div>
         <div class="partnership__form-col  partnership__form-col--flex">
           <label class="field-text  field-text--nomargin">
             <span class="field-text__input-wrap">
-              <textarea class="field-text__input" name="message" value=""
+              <textarea class="field-text__input" name="message" value="[[!+fi.message]]"
                         placeholder="[[$langs? &uk=`Повідомлення` &en=`Message`]]"></textarea>
-              <span class="field-text__help-text  error"></span>
+              <span class="field-text__help-text  error">[[!+fi.error.message]]</span>
             </span>
           </label>
         </div>
         <div class="partnership__form-col">
           <div class="field-actions">
-            <input class="btn  partnership__submit" type="submit" name="submit" value="[[$langs? &uk=`Надіслати` &en=`Submit`]]">
+            <input form="partnershipForm" class="btn  partnership__submit" type="submit" name="partnershipForm" value="[[$langs? &uk=`Надіслати` &en=`Submit`]]">
           </div>
           <div class="field-checkbox">
             <label class="field-checkbox__name">

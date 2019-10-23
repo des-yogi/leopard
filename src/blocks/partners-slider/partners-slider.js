@@ -1,6 +1,12 @@
 document.addEventListener('DOMContentLoaded', function() {
 
   var partnersSlider = new Swiper ('.partners-slider__container', {
+    // Disable preloading of all images
+    preloadImages: false,
+    // Enable lazy loading
+    lazy: {
+      loadPrevNext: true,
+    },
     initialSlide: 1,
     slidesPerView: 2,
     autoplay: {

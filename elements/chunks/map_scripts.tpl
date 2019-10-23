@@ -18,14 +18,15 @@
 							"areas": [
 							{
 								"id": "EG",
-								"title": "Egypt",
-								"color": "rgba(0,188,104,1)"
-							},
-							{
-								"id": "UA",
-								"title": "Ukraine",
+								"title": "[[$langs? &uk=`Єгипет` &en=`Egypt`]]",
 								"color": "rgba(0,188,104,1)"
 							}
+              [[!getImageList?
+              &tvname=`map_item`
+              &tpl=`map_item_tpl`
+              &docid=`[[BabelTranslation:default=`57`? &resourceId=`57` &contextKey=`[[*context_key]]`]]`
+              &limit=`999`
+              ]]
 						]
 					},
 					

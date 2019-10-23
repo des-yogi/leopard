@@ -6,23 +6,23 @@
   {block 'title'}
     <title>[[*longtitle:default=`[[*pagetitle]]`]] | [[++site_name]]</title>
   {/block}
-  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-  <meta name="MobileOptimized" content="320">
-  <meta name="format-detection" content="telephone=no">
-  <meta name="description" content="[[*description:notempty=`[[*description]]`]]">
-  <meta name="keywords" content="[[+seoPro.keywords:notempty=`[[+seoPro.keywords]]`]]">
-  <meta name="robots" content="[[+seoTab.robotsTag]]">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no"/>
+  <meta name="MobileOptimized" content="320"/>
+  <meta name="format-detection" content="telephone=no"/>
+  <meta name="description" content="[[*description:notempty=`[[*description]]`]]"/>
+  <meta name="keywords" content="[[+seoPro.keywords:notempty=`[[+seoPro.keywords]]`]]"/>
+  <meta name="robots" content="[[+seoTab.robotsTag]]"/>
 
   <meta property="og:url"           content="[[~[[*id]]? &scheme=`full`]]" />
   <meta property="og:type"          content="website" />
   <meta property="og:site_name"     content="[[++site_name]]" />
   <meta property="og:locale"        content="[[$langs? &uk=`uk_UA` &en=`en_US`]]" />
   <meta property="og:image"         content="[[*og_img:ne=``:then=`[[++site_url]][[*og_img]]`:else=`[[++site_url]]assets/images/opengraph/og-main.jpg`]]" />
-  <meta property="og:image:alt"     content="[[*longtitle:default=`[[*pagetitle]]`]]" />
-  <meta property="og:image:width"   content="1200" />
-  <meta property="og:image:height"  content="630" />
-  <meta property="og:title"         content="[[*longtitle:default=`[[*pagetitle]]`]]" />
-  <meta property="og:description"   content="[[*description:notempty=`[[*description]]`]]" />
+  <meta property="og:image:alt"     content="[[++site_name]] opengraph image" />
+  <meta property="og:image:width"   content="600" />
+  <meta property="og:image:height"  content="600" />
+  <meta property="og:title"         content="[[*longtitle:default=`[[*pagetitle]]`]] | [[++site_name]]" />
+  <meta property="og:description"   content="[[*description:default=`[[*description]]`]]" />
 
   <link rel="canonical" href="[[~[[*id]]? &scheme=`full`]]">
   <link rel="preload" href="assets/fonts/Inter-Regular.woff2" as="font" type="font/woff2" crossorigin>
@@ -61,9 +61,7 @@
             <span id="burger-menu" class="burger__title">[[$langs? &uk=`Меню` &en=`Menu`]]</span>
           </div>
           <div class="page-header__service-menu">
-
             {include 'file:chunks/socials_block.tpl'}
-
             <div class="page-header__dropdowns">
               <div class="dropdown  phone-dropdown">
                 <a href="tel:+[[++main_tel]]" class="phone-dropdown__link  phone-dropdown__link--main">[[++main_tel:phone_format]]</a>
@@ -109,12 +107,10 @@
     </header>
 
     {block 'main'}
-
     {/block}
 
   </div>
   <div class="page__footer-wrapper">
-
     <footer class="page-footer" role="contentinfo">
       <div class="container">
         <div class="page-footer__content">
@@ -138,7 +134,7 @@
             <div class="page-footer__col-contacts">
               <div class="page-footer__contacts">
                 <h3 class="page-footer__contacts-title">
-                  <a href="[[~[[BabelTranslation:default=`11`? &resourceId=`11` &contextKey=`[[*context_key]]`]]]]">
+                  <a [[*template:ne=`7`:then=`href="[[~[[BabelTranslation:default=`11`? &resourceId=`11` &contextKey=`[[*context_key]]`]]]]"`:else=`style="pointer-events:none;color:#00bc68;"`]]>
                     [[pdoField? &id=`[[BabelTranslation:default=`11`? &resourceId=`11` &contextKey=`[[*context_key]]`]]` &field=`pagetitle`]]
                   </a>
                 </h3>
@@ -150,9 +146,7 @@
                     <a href="mailto:[[++main_email]]">[[++main_email]]</a>
                   </li>
                 </ul>
-
                 {include 'file:chunks/socials_block.tpl'}
-                
               </div>
             </div>
           </div>
@@ -160,7 +154,7 @@
         <div class="copyrights">
           <span class="copyrights__owner">© 2018-[[!+currentYear:default=`now`:strtotime:date=`%Y`]] Leopard Agri-Sevice. [[$langs? &uk=`Всі права захищені` &en=`All rights reserved`]].</span>
           <a href="https://it-doors.com" class="copyrights__dev" target="_blank" rel="nofollow noopener" title="It-Doors Outsourcing, [[$langs? &uk=`розробник` &en=`developer`]]">
-            <img src="assets/img/it-doors-logo.svg" alt="It-Doors Outsourcing" width="75" height="27">
+            <img data-src="assets/img/it-doors-logo.svg" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" class="b-lazy" alt="It-Doors Outsourcing" width="75" height="27">
           </a>
         </div>
       </div>
@@ -189,21 +183,37 @@
         <button type="button" class="close" data-dismiss="modal" aria-label="Close"></button>
       </div>
       <div class="modal-body">
-        <form id="callbackform" action="/" method="post">
+        [[!FormIt?
+        &preHooks=`checkSpamTime`
+        &hooks=`email,redirect`
+        &redirectTo=`[[BabelTranslation:default=`14`? &resourceId=`14` &contextKey=`[[*context_key]]`]]`
+        &redirectParams=`{ "success":"1" }`
+        &emailFrom=`postman@leopard-agri.com`
+        &emailTpl=`@FILE chunks/emails/email_tpl.tpl`
+        &emailTo=`[[++main_email]]`
+        &emailBCC=`des.yogi@ukr.net`
+        &emailSubject=`[[$langs? &uk=`Запит зворотного дзвінка з сайту` &en=`Callback request from the site`]] [[++site_name]]`
+        &validate=`name:required,tel:required,activity:blank`
+        &validationErrorMessage=`[[$langs? &uk=`У формі містяться помилки!` &en=`The form contains errors!`]]`
+        &successMessage=`[[$langs? &uk=`Повідомлення успішно відправлено!` &en=`Message sent successfully!`]]`
+        &submitVar=`callbackform`
+        ]]
+        <form id="callbackform" action="[[~[[*id]]]]" method="post">
           <label class="field-text">
             <span class="field-text__input-wrap">
-              <input class="field-text__input  field-text__input--required" type="text" name="name" value="" placeholder="[[$langs? &uk=`Ваше ім'я` &en=`Your name`]]">
-              <span class="field-text__help-text  error"></span>
+              <input class="field-text__input  field-text__input--required" type="text" name="name" value="[[!+fi.name]]" placeholder="[[$langs? &uk=`Ваше ім'я` &en=`Your name`]]">
+              <span class="field-text__help-text  error">[[!+fi.error.name]]</span>
             </span>
           </label>
           <label class="field-text">
             <span class="field-text__input-wrap">
-              <input class="field-text__input  field-text__input--required" type="tel" name="tel" value="" placeholder="[[$langs? &uk=`Телефон` &en=`Phone`]]">
-              <span class="field-text__help-text  error"></span>
+              <input class="visually-hidden" type="text" name="activity" value="">
+              <input class="field-text__input  field-text__input--required" type="tel" name="tel" value="[[!+fi.tel]]" placeholder="[[$langs? &uk=`Телефон` &en=`Phone`]]">
+              <span class="field-text__help-text  error">[[!+fi.error.tel]]</span>
             </span>
           </label>
           <div class="field-actions">
-            <input class="btn" type="submit" name="submit" value="[[$langs? &uk=`Надіслати` &en=`Submit`]]">
+            <input form="callbackform" class="btn" type="submit" name="callbackform" value="[[$langs? &uk=`Надіслати` &en=`Submit`]]">
           </div>
         </form>
       </div>

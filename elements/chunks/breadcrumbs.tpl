@@ -1,5 +1,5 @@
 <nav class="breadcrumbs">
-  <h4 class="visually-hidden">Постраничная навигация — ваш путь на сайте (Page navigation is your way through the site)</h4>
+  <h4 class="visually-hidden">[[$langs? &uk=`Посторінкова навігація - ваш шлях на сайті` &en=`Page navigation is your way through the site`]]</h4>
   [[pdoCrumbs?
   &tplWrapper=`@INLINE <ol class="breadcrumbs__list" itemscope itemtype="http://schema.org/BreadcrumbList">[[+output]]</ol>`
   &tpl=`@INLINE

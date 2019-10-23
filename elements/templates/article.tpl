@@ -2,19 +2,15 @@
 
 {block 'main'}
   <main class="main-content  main-content--noindex" role="main">
-
     <div class="container">
       {include 'file:chunks/callback_btn.tpl'}
     </div>
-
     <article class="article">
       <div class="main-content__header" style="background-image: url([[*header_bg:ne=``:then=`[[*header_bg]]`:else=`[[pdoField? &id=`[[BabelTranslation:default=`[[*parent]]`? &resourceId=`[[*parent]]` &contextKey=`[[*context_key]]`]]` &field=`header_bg`]]`]]);">
         <div class="container">
           <div class="row">
             <div class="col-article">
-
               {include 'file:chunks/breadcrumbs.tpl'}
-
               <span class="publishedon">[[$langs? &uk=`[[*publishedon:date=`%d.%m.%Y`]]` &en=`[[*publishedon:date=`%B %d, %Y`]]`]]</span>
               <h1 class="main-content__title">[[*longtitle:default=`[[*pagetitle]]`]]</h1>
               [[*introtext:ne=``:then=`<p class="main-content__descr">[[*introtext]]</p>`:else=`
