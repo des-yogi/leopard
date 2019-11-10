@@ -22,7 +22,7 @@
       <h3 class="card-vert__title">[[+longtitle:default=`[[+pagetitle]]`]]</h3>
       <p>[[+introtext]]</p>
       <div class="card-vert__btn-wrapper">
-        <a href="[[+uri]]" class="btn  btn--inverted">[[$langs? &uk=`Детальніше` &en=`Read more`]]</a>
+        <a href="[[+uri]]" class="btn  btn--inverted">[[$langs? &uk=`Детальніше` &ru=`Подробнее` &en=`Read more`]]</a>
       </div>
     </div>
   </div>

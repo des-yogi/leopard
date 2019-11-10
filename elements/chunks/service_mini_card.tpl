@@ -3,7 +3,7 @@
     <h3>[[+longtitle:default=`[[+pagetitle]]`]]</h3>
     <p>[[+introtext]]</p>
     <div class="text-card__btn-wrapper">
-      <a href="[[+uri]]" class="btn  btn--inverted">[[$langs? &uk=`Детальніше` &en=`Read more`]]</a>
+      <a href="[[+uri]]" class="btn  btn--inverted">[[$langs? &uk=`Детальніше` &ru=`Подробнее` &en=`Read more`]]</a>
     </div>
   </div>
 </div>

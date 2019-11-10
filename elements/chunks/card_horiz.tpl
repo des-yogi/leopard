@@ -19,11 +19,13 @@
       </picture>
     </div>
     <div class="card-horiz__text">
-      <span class="publishedon">[[$langs? &uk=`[[+publishedon:date=`%d.%m.%Y`]]` &en=`[[+publishedon:date=`%B %d, %Y`]]`]]</span>
+      [[*template:is=`6`:then=`
+        <span class="publishedon">[[$langs? &uk=`[[+publishedon:date=`%d.%m.%Y`]]` &ru=`[[+publishedon:date=`%d.%m.%Y`]]` &en=`[[+publishedon:date=`%B %d, %Y`]]`]]</span>
+      `]]
       <h3 class="card-horiz__title">[[+longtitle:default=`[[+pagetitle]]`]]</h3>
       <p>[[+introtext]]</p>
       <div class="card-horiz__btn-wrapper">
-        <a href="[[+uri]]" class="btn  btn--inverted">[[$langs? &uk=`Детальніше` &en=`Read more`]]</a>
+        <a href="[[+uri]]" class="btn  btn--inverted">[[$langs? &uk=`Детальніше` &ru=`Подробнее` &en=`Read more`]]</a>
       </div>
     </div>
   </div>
