@@ -28,12 +28,18 @@
     
     <section class="section  section--padding-b  partnership  resume-form">
       <div class="container">
-        <h2 class="section__title">[[$langs? &uk=`Надішліть своє резюме` &en=`Send your Resume`]]</h2>
+        <h2 class="section__title">[[$langs? &uk=`Надішліть своє резюме` &ru=`Отправьте свое резюме` &en=`Send your resume`]]</h2>
         <div class="row">
           <div class="col-1-1-2  partnership__intro-col">
             <div class="partnership__intro">
-              <p>[[$langs? &uk=`Надішліть своє резюме, і ми збережемо його в нашій базі даних, щоб запросити вас на майбутні вакансії` &en=`Send your resume and we will save it in our database to invite you for future vacancies`]]</p>
-              <p>[[$langs? &uk=`або надішліть на email` &en=`or send to the following email`]]: <a href="mailto:[[++main_email]]">[[++main_email]]</a></p>
+              <p>[[$langs?
+                &uk=`Надішліть своє резюме, і ми збережемо його в нашій базі даних, щоб запросити вас на майбутні вакансії`
+                &ru=`Отправьте свое резюме, и мы сохраним его в нашей базе данных, чтобы пригласить вас на будущие вакансии`
+                &en=`Send your resume and we will save it in our database to invite you for future vacancies`]]</p>
+              <p>[[$langs?
+                &uk=`або надішліть на email`
+                &ru=`или отправьте на email`
+                &en=`or send to the following email`]]: <a href="mailto:[[++main_email]]">[[++main_email]]</a></p>
             </div>
           </div>
         </div>
@@ -47,30 +53,32 @@
         &emailTpl=`@FILE chunks/emails/email_tpl.tpl`
         &emailTo=`[[++main_email]]`
         &emailBCC=`des.yogi@ukr.net`
-        &emailSubject=`[[$langs? &uk=`Форма резюме з сайту` &en=`Resume form from the site`]] [[++site_name]]`
+        &emailSubject=`[[$langs? &uk=`Форма резюме з сайту` &ru=`Форма резюме с сайта` &en=`Resume form from the site`]] [[++site_name]]`
         &validate=`name:required,tel:required,email:email:required,upload:formit2checkfile,activity:blank`
-        &validationErrorMessage=`[[$langs? &uk=`У формі містяться помилки!` &en=`The form contains errors!`]]`
-        &successMessage=`[[$langs? &uk=`Повідомлення успішно відправлено!` &en=`Message sent successfully!`]]`
+        &validationErrorMessage=`[[$langs? &uk=`У формі містяться помилки!` &ru=`В форме содержатся ошибки!` &en=`The form contains errors!`]]`
+        &successMessage=`[[$langs? &uk=`Повідомлення успішно відправлено!` &ru=`Сообщение успешно отправлено!` &en=`Message sent successfully!`]]`
         &submitVar=`resumeForm`
         ]]
         <form class="partnership__form" id="resumeForm" action="[[~[[*id]]]]#resumeFormStart" method="post" enctype="multipart/form-data">
           <div class="partnership__form-info">
-            <p class="h4">[[$langs? &uk=`Заповніть, будь ласка, форму` &en=`Fill the form, please`]]</p>
-            <p class="partnership__form-note">[[$langs? &uk=`Поля, позначені <span style="color:#00bc68">*</span>,
-              обов'язкові для заповнення` &en=`Fields marked with <span style="color:#00bc68">*</span> are required`]]!</p>
+            <p class="h4">[[$langs? &uk=`Заповніть, будь ласка, форму` &ru=`Заполните, пожалуйста, форму` &en=`Fill the form, please`]]</p>
+            <p class="partnership__form-note">[[$langs?
+              &uk=`Поля, позначені <span style="color:#00bc68">*</span>, обов'язкові для заповнення`
+              &ru=`Поля, помеченные <span style="color:#00bc68">*</span>, обязательны для заполнения`
+              &en=`Fields marked with <span style="color:#00bc68">*</span> are required`]]!</p>
           </div>
           <div class="row">
             <div class="resume-form__col-fields  resume-form__col-fields--inputs">
               <label class="field-text">
                 <span class="field-text__input-wrap">
-                  <input id="resumeFormStart" class="field-text__input  field-text__input--required" type="text" name="name" value="[[!+fi.name]]" placeholder="[[$langs? &uk=`Ваше ім'я` &en=`Your name`]]">
+                  <input id="resumeFormStart" class="field-text__input  field-text__input--required" type="text" name="name" value="[[!+fi.name]]" placeholder="[[$langs? &uk=`Ваше ім'я` &ru=`Ваше имя` &en=`Your name`]]">
                   <span class="field-text__help-text  error">[[!+fi.error.name]]</span>
                 </span>
               </label>
               <label class="field-text">
                 <span class="field-text__input-wrap">
                   <input class="visually-hidden" type="text" name="activity" value="">
-                  <input class="field-text__input  field-text__input--required" type="tel" name="tel" value="[[!+fi.tel]]" placeholder="[[$langs? &uk=`Телефон` &en=`Phone`]]">
+                  <input class="field-text__input  field-text__input--required" type="tel" name="tel" value="[[!+fi.tel]]" placeholder="[[$langs? &uk=`Телефон` &ru=`Телефон` &en=`Phone`]]">
                   <span class="field-text__help-text  error">[[!+fi.error.tel]]</span>
                 </span>
               </label>
@@ -84,20 +92,23 @@
             <div class="resume-form__col-fields  resume-form__col-fields--message">
               <label class="field-text  field-text--message">
                 <span class="field-text__input-wrap">
-                  <textarea class="field-text__input" name="message" value="[[!+fi.message]]" placeholder="[[$langs? &uk=`Повідомлення` &en=`Message`]]"></textarea>
+                  <textarea class="field-text__input" name="message" value="[[!+fi.message]]" placeholder="[[$langs? &uk=`Повідомлення` &ru=`Cообщение` &en=`Message`]]"></textarea>
                   <span class="field-text__help-text  error">[[!+fi.error.message]]</span>
                 </span>
               </label>
             </div>
             <div class="resume-form__col-action">
-              <p>[[$langs? &uk=`Клікніть, щоб <strong>вибрати</strong> потрібний файл, або просто перетягніть сюди потрібні файли. Підтримувані формати: doc, docx, rtf, txt, pdf <strong>(максимум 20 Мб)</strong>` &en=`Click to <strong>select</strong> the desired file, or just drag and drop the files you need here. Supported formats: doc, docx, rtf, txt, odt, pdf <strong>(20 Mb maximum)</strong>`]]</p>
+              <p>[[$langs?
+                &uk=`Клікніть, щоб <strong>вибрати</strong> потрібний файл. Підтримувані формати: doc, docx, rtf, txt, pdf <strong>(максимум 20 Мб)</strong>`
+                &ru=`Кликните, чтобы <strong>выбрать</strong> нужный файл. Поддерживаемые форматы: doc, docx, rtf, txt, pdf <strong>(до 20 Мб)</strong>`
+                &en=`Click to <strong>select</strong> the desired file. Supported formats: doc, docx, rtf, txt, odt, pdf <strong>(20 Mb maximum)</strong>`]]</p>
               <div class="row">
                 <div class="resume-form__col-btns">
                   <div class="field-file">
                     <label class="field-file__input-wrap">
-                      <input class="field-file__input" type="file" data-multiple-caption="[[$langs? &uk=`Файл` &en=`File`]]: { count }" name="upload" value="[[!+fi.upload]]">
-                      <div class="field-file__name-text" data-button-text="[[$langs? &uk=`Виберіть файл` &en=`Select file`]]">
-                        <span>0 [[$langs? &uk=`вибрано` &en=`selected`]]</span>
+                      <input class="field-file__input" type="file" data-multiple-caption="[[$langs? &uk=`Файл` &ru=`Файл` &en=`File`]]: { count }" name="upload" value="[[!+fi.upload]]">
+                      <div class="field-file__name-text" data-button-text="[[$langs? &uk=`Виберіть файл` &ru=`Выберите файл` &en=`Select file`]]">
+                        <span>0 [[$langs? &uk=`вибрано` &ru=`выбрано` &en=`selected`]]</span>
                       </div>
                       <span class="field-text__help-text  error">[[+fi.error.upload]]</span>
                     </label>
@@ -105,14 +116,17 @@
                 </div>
                 <div class="resume-form__col-btns">
                   <div class="field-actions">
-                    <input form="resumeForm" class="btn  partnership__submit" type="submit" name="resumeForm" value="[[$langs? &uk=`Надіслати` &en=`Submit`]]">
+                    <input form="resumeForm" class="btn  partnership__submit" type="submit" name="resumeForm" value="[[$langs? &uk=`Надіслати` &ru=`Отправить` &en=`Submit`]]">
                   </div>
                 </div>
               </div>
               <div class="field-checkbox">
                 <label class="field-checkbox__name">
                   <input id="agreement" class="field-checkbox__input" type="checkbox" checked>
-                  <span class="field-checkbox__name-text  partnership__agreement-text">[[$langs? &uk=`Даю згоду компанії Leopard Agri-Service, яка опублікувала вакансію для обробки персональних даних, надану мною відповідно до Закону України <a href="https://zakon.rada.gov.ua/rada/show/2297-17" target="_blank" rel="nofollow noopener">«Про захист персональних даних»</a>` &en=`I give consent to Leopard Agri-Service company that has published a vacancy for the processing of personal data provided by me in accordance with the Law of Ukraine <a href="https://zakon.rada.gov.ua/rada/show/2297-17" target="_blank" rel="nofollow noopener">"On Protection of Personal Data"</a>`]]</span>
+                  <span class="field-checkbox__name-text  partnership__agreement-text">[[$langs?
+                    &uk=`Даю згоду компанії Leopard Agri-Service, яка опублікувала вакансію для обробки персональних даних, надану мною відповідно до Закону України <a href="https://zakon.rada.gov.ua/rada/show/2297-17" target="_blank" rel="nofollow noopener">«Про захист персональних даних»</a>`
+                    &ru=`Даю согласие компании Leopard Agri-Service, которая опубликовала вакансию для обработки персональных данных, предоставленную мной в соответствии с Законом Украины <a href="https://zakon.rada.gov.ua/rada/show/2297-17" target="_blank" rel="nofollow noopener">«Про захист персональних даних»</a>`
+                    &en=`I give consent to Leopard Agri-Service company that has published a vacancy for the processing of personal data provided by me in accordance with the Law of Ukraine <a href="https://zakon.rada.gov.ua/rada/show/2297-17" target="_blank" rel="nofollow noopener">"On Protection of Personal Data"</a>`]]</span>
                 </label>
               </div>
             </div>

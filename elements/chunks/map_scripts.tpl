@@ -17,9 +17,7 @@
 						"getAreasFromMap": true,
 							"areas": [
 							{
-								"id": "EG",
-								"title": "[[$langs? &uk=`Єгипет` &en=`Egypt`]]",
-								"color": "rgba(0,188,104,1)"
+								
 							}
               [[!getImageList?
               &tvname=`map_item`

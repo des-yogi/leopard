@@ -38,7 +38,7 @@
         </div>
         <div class="row  section__btn-wrapper">
           <div class="col-1-4  col-1-4--btn">
-            <a href="[[~[[BabelTranslation:default=`7`? &resourceId=`7` &contextKey=`[[*context_key]]`]]]]" class="btn">[[$langs? &uk=`Всі товари` &en=`All Products`]]</a>
+            <a href="[[~[[BabelTranslation:default=`7`? &resourceId=`7` &contextKey=`[[*context_key]]`]]]]" class="btn">[[$langs? &uk=`Всі товари` &ru=`Все товары` &en=`All Products`]]</a>
           </div>
         </div>
       </div>
@@ -60,7 +60,7 @@
         </div>
         <div class="row  section__btn-wrapper">
           <div class="col-1-4  col-1-4--btn">
-            <a href="[[~[[BabelTranslation:default=`8`? &resourceId=`8` &contextKey=`[[*context_key]]`]]]]" class="btn">[[$langs? &uk=`Всі товари` &en=`All Items`]]</a>
+            <a href="[[~[[BabelTranslation:default=`8`? &resourceId=`8` &contextKey=`[[*context_key]]`]]]]" class="btn">[[$langs? &uk=`Всі товари` &ru=`Все товары` &en=`All Items`]]</a>
           </div>
         </div>
       </div>
@@ -82,7 +82,7 @@
         </div>
         <div class="row section__btn-wrapper">
           <div class="col-1-3  col-1-3--btn">
-            <a href="[[~[[BabelTranslation:default=`9`? &resourceId=`9` &contextKey=`[[*context_key]]`]]]]" class="btn">[[$langs? &uk=`Всі послуги` &en=`All Services`]]</a>
+            <a href="[[~[[BabelTranslation:default=`9`? &resourceId=`9` &contextKey=`[[*context_key]]`]]]]" class="btn">[[$langs? &uk=`Всі послуги` &ru=`Все услуги` &en=`All Services`]]</a>
           </div>
         </div>
       </div>
@@ -94,7 +94,7 @@
     <section class="section  last-news">
       <div class="container">
         <h2 class="section__title">
-          [[$langs? &uk=`Останні новини` &en=`Last News`]]
+          [[$langs? &uk=`Останні новини` &ru=`Последние новости` &en=`Last News`]]
         </h2>
         <div class="row">
           [[pdoResources?
@@ -108,7 +108,7 @@
         </div>
         <div class="row  section__btn-wrapper">
           <div class="col-1-3  col-1-3--btn">
-            <a href="[[~[[BabelTranslation:default=`10`? &resourceId=`10` &contextKey=`[[*context_key]]`]]]]" class="btn">[[$langs? &uk=`Усі новини` &en=`All news`]]</a>
+            <a href="[[~[[BabelTranslation:default=`10`? &resourceId=`10` &contextKey=`[[*context_key]]`]]]]" class="btn">[[$langs? &uk=`Усі новини` &ru=`Все новости` &en=`All news`]]</a>
           </div>
         </div>
       </div>

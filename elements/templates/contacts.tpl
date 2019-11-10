@@ -26,7 +26,7 @@
                 <dl class="contacts__list" itemprop="address" itemscope itemtype="http://schema.org/PostalAddress">
                   <div class="contacts__list-inner">
                     <dt>
-                      <h3>[[$langs? &uk=`Адреса офісу` &en=`Office Address`]]</h3>
+                      <h3>[[$langs? &uk=`Адреса офісу` &ru=`Адрес офиса` &en=`Office Address`]]</h3>
                     </dt>
                     <dd>
                       <span itemprop="streetAddress">[[++street_address]]</span> <span itemprop="addressLocality">[[++address_locality]]</span> &shy;<span itemprop="addressRegion">[[++address_region]]</span> &shy;<span itemprop="postalCode">[[++postal_code]]</span>
@@ -42,7 +42,7 @@
                   </div>
                   <div class="contacts__list-inner">
                     <dt>
-                      <h3>[[$langs? &uk=`Телефон` &en=`Phone`]]</h3>
+                      <h3>[[$langs? &uk=`Телефон` &ru=`Телефон` &en=`Phone`]]</h3>
                     </dt>
                     <dd itemprop="telephone">
                       <a href="tel:+[[++main_tel]]" class="contacts__link">[[++main_tel:phone_format]]</a>
@@ -53,14 +53,14 @@
             </div>
             <div class="col-1-3  col-1-3--nohide">
               <div class="contacts__block">
-                <h3>[[$langs? &uk=`Месенджери повідомлень` &en=`Instant Messengers`]]</h3>
+                <h3>[[$langs? &uk=`Месенджери повідомлень` &ru=`Мессенджеры сообщений` &en=`Instant Messengers`]]</h3>
                 <ul class="list-nostyled  contacts__list">
                   <li class="contacts__item">
                     <a class="contacts__link" href="https://www.messenger.com/t/[[++fb_messenger]]">
                       <svg width="26" height="26">
                         <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="assets/img/sprite-svg.svg#fb-messenger-icon"/>
                       </svg>
-                      <span>[[$langs? &uk=`Facebook Месенджер` &en=`Facebook Messenger`]]</span>
+                      <span>[[$langs? &uk=`Facebook Месенджер` &ru=`Facebook Мессенджер` &en=`Facebook Messenger`]]</span>
                     </a>
                   </li>
                   <li class="contacts__item">
@@ -92,7 +92,7 @@
             </div>
             <div class="col-1-3  col-1-3--nohide">
               <div class="contacts__block">
-                <h3>[[$langs? &uk=`Соціальні мережі` &en=`Social networks`]]</h3>
+                <h3>[[$langs? &uk=`Соціальні мережі` &ru=`Социальные сети` &en=`Social networks`]]</h3>
                 <ul class="list-nostyled  contacts__list">
                   <link itemprop="url" href="https://leopard-agri.com/">
                   <li class="contacts__item">
