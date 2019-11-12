@@ -212,14 +212,14 @@
         <form id="callbackform" action="[[~[[*id]]]]" method="post">
           <label class="field-text">
             <span class="field-text__input-wrap">
-              <input class="field-text__input  field-text__input--required" type="text" name="name" value="[[!+fi.name]]" placeholder="[[$langs? &uk=`Ваше ім'я` &ru=`Ваше имя` &en=`Your name`]]">
+              <input class="field-text__input  field-text__input--required" type="text" name="name" value="[[!+fi.name]]" placeholder="[[$langs? &uk=`Ваше ім'я` &ru=`Ваше имя` &en=`Your name`]]" required>
               <span class="field-text__help-text  error">[[!+fi.error.name]]</span>
             </span>
           </label>
           <label class="field-text">
             <span class="field-text__input-wrap">
               <input class="visually-hidden" type="text" name="activity" value="">
-              <input class="field-text__input  field-text__input--required" type="tel" name="tel" value="[[!+fi.tel]]" placeholder="[[$langs? &uk=`Телефон` &ru=`Телефон` &en=`Phone`]]">
+              <input class="field-text__input  field-text__input--required" type="tel" name="tel" value="[[!+fi.tel]]" placeholder="[[$langs? &uk=`Телефон` &ru=`Телефон` &en=`Phone`]]" required>
               <span class="field-text__help-text  error">[[!+fi.error.tel]]</span>
             </span>
           </label>

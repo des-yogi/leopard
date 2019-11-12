@@ -52,6 +52,18 @@
     @media (min-width: $screen-xxl) {
       top: -63px;
     }
+
+    &::after {
+      display: block;
+      content: "";
+      position: absolute;
+      z-index: -1;
+      left: 0;
+      bottom: -2px;
+      width: 100%;
+      height: 4px;
+      background-color: $second-color;
+    }
   }
 
   &__btn-wrapper {
