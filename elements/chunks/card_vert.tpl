@@ -2,12 +2,12 @@
   <div class="card-vert">
     <div class="embed-responsive  embed-responsive--4-3  card-vert__img">
       <picture>
-        <source data-srcset="[[+tv.image:pthumb=`w=506&h=380&zc=C&f=webp&q=75`]]" media="(min-width: 1280px)" type="image/webp">
-        <source data-srcset="[[+tv.image:pthumb=`w=506&h=380&zc=C&f=jpeg&q=75`]]" media="(min-width: 1280px)">
-        <!-- 506x380   -->
-        <source data-srcset="[[+tv.image:pthumb=`w=365&h=274&zc=C&f=webp&q=75`]]" media="(min-width: 992px)" type="image/webp">
-        <source data-srcset="[[+tv.image:pthumb=`w=365&h=274&zc=C&f=jpeg&q=75`]]" media="(min-width: 992px)">
-        <!-- 365x274   -->
+        <source data-srcset="[[+tv.image:pthumb=`w=510&h=383&zc=C&f=webp&q=75`]]" media="(min-width: 1280px)" type="image/webp">
+        <source data-srcset="[[+tv.image:pthumb=`w=510&h=383&zc=C&f=jpeg&q=75`]]" media="(min-width: 1280px)">
+        <!-- 510x383  -->
+        <source data-srcset="[[+tv.image:pthumb=`w=560&h=420&zc=C&f=webp&q=75`]]" media="(min-width: 992px)" type="image/webp">
+        <source data-srcset="[[+tv.image:pthumb=`w=560&h=420&zc=C&f=jpeg&q=75`]]" media="(min-width: 992px)">
+        <!-- 560x420   -->
         <source data-srcset="[[+tv.image:pthumb=`w=426&h=320&zc=C&f=webp&q=75`]]" media="(min-width: 768px)" type="image/webp">
         <source data-srcset="[[+tv.image:pthumb=`w=426&h=320&zc=C&f=jpeg&q=75`]]" media="(min-width: 768px)">
         <!-- 426x320   -->
