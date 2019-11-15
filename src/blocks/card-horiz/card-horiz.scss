@@ -16,7 +16,7 @@
   $block-name:                &; // #{$block-name}__element
 
   &__img {
-    flex-basis: 100%;
+    flex-basis: auto;
 
     @media (min-width: $screen-xl) {
       flex: 0 0;
@@ -29,19 +29,32 @@
   }
 
   &__text {
+    box-sizing: border-box;
     position: relative;
     flex: 1 1 auto;
     display: flex;
     flex-wrap: wrap;
     align-content: flex-start;
-    padding: 30px 30px 42px 30px;
+    padding: 30px 30px 55px 30px;
 
     @media (min-width: $screen-xl) {
-      padding: 40px 60px 52px 60px;
+      padding: 40px 60px 55px 60px;
     }
 
     @media (min-width: $screen-xxl) {
       padding: 60px 90px 60px 90px;
+    }
+
+    p,
+    ul,
+    ol {
+      margin-bottom: 0;
+    }
+
+    p + p,
+    ul + p,
+    ol + p {
+      margin-top: 20px;
     }
   }
 
